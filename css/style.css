@@ -4,3 +4,17 @@ img {
     padding: 5px;
     height: 150px;
   }
+
+  p {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: medium;
+      font-weight: lighter;
+  }
+
+  h1 {
+      color: blue;
+  }
+
+  h3 {
+      color: blueviolet;
+  }
