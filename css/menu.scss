@@ -1,0 +1,45 @@
+@import 'global';
+@import 'header';
+
+#menu-container {
+    margin-top           : 10px;
+    position             : relative;
+    display              : grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    place-items          : center;
+    column-gap           : 20px;
+    row-gap              : 20px;
+    padding              : 10px;
+    font-size            : .7rem;
+}
+
+.menu-item {
+    display      : grid;
+    place-items  : center;
+    padding      : 10px;
+    border       : 1px solid black;
+    border-radius: 12%;
+
+    >img {
+        width        : 250px;
+        border-radius: 20%;
+    }
+}
+
+
+h3+p {
+    padding: 10px;
+}
+
+body {
+    background-color: $bg_color;
+}
+
+#title {
+    margin-top: 10px;
+    font-size : 1.5em;
+    text-align: center;
+}
+
+@include image_hover(150px, 150px);
+@include scroll_up(10px, 10px);

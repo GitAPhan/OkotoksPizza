@@ -1,0 +1,125 @@
+.logo {
+    height: 60px;
+}
+
+#header {
+    padding         : 3px;
+    display         : grid;
+    grid-auto-flow  : column;
+    background-color: $header_bg_color_prim;
+    box-shadow      : 0px 0px 5px black;
+}
+
+.nav>a {
+    padding   : 5px 10px;
+    text-align: right;
+}
+
+.toggle {
+    height  : 60px;
+    width   : 60px;
+    position: absolute;
+    top     : 4px;
+    right   : 4px;
+    opacity : 0;
+}
+
+#logo-container {
+    place-self: start;
+    height    : 60px;
+}
+
+#spacer {
+    display: none;
+}
+
+.nav {
+    display      : none;
+    position     : relative;
+    transform    : translateX(0px);
+    transition   : all .6s ease-out;
+    opacity      : 1;
+    margin-top   : 10px;
+    margin-bottom: 10px;
+}
+
+.toggle:checked~.nav {
+    display: grid;
+}
+
+.toggle:active~.nav {
+    position        : relative;
+    transform       : translateX(-30px);
+    transition-delay: 2s;
+    opacity         : 0;
+}
+
+#nav {
+    display: grid;
+}
+
+#menu-icon {
+    padding     : 10px;
+    height      : 40px;
+    justify-self: end;
+}
+
+@media only screen and (min-width: 600px) {
+
+    #header {
+        background-color: $header_bg_color_sec;
+    }
+
+    .nav {
+        margin        : 0;
+        padding       : 0;
+        display       : grid;
+        grid-auto-flow: column;
+        place-items   : center;
+    }
+
+    .nav>a {
+        padding: 0;
+        margin : 0;
+    }
+
+    #nav {
+        margin : 0;
+        padding: 0;
+    }
+
+    #menu-icon,
+    #toggle {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    #header {
+        background-color: $header_bg_color_tert;
+        box-shadow      : 2px 2px 5px grey;
+        padding         : 0px 10px;
+        margin-top      : 10px;
+        height          : 60px;
+    }
+
+    #spacer {
+        display         : block;
+        position        : absolute;
+        background-color: $bg_color;
+        height          : 10px;
+        width           : 100vw;
+        top             : 0;
+        left            : 0;
+    }
+
+    #header .logo {
+        position  : relative;
+        height    : 75px;
+        padding   : 0;
+        margin    : 0;
+        z-index   : 3;
+        top       : -7px;
+        place-self: center;
+    }
+}

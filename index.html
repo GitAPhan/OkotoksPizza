@@ -20,14 +20,25 @@
 </head>
 
 <body>
-    <header id="page-header">
-        <a id="logo-container" href="#"><img id="logo" src="images/opplogo.png" alt="okotoks pizza logo"></a>
-        <a href="pages/Menu.html">Menu</a>
-        <a href="pages/AboutUs.html">About Us</a>
-        <a href="https://restaurantguru.com/Savona-Pizzeria-Calgary/reviews?bylang=1">Reviews</a>
-        <a href="pages/AboutUs.html#contact">Contact Us</a>
-        <a href="pages/AboutUs.html#maps">Location</a>
+    <header id="header">
+        <div id="spacer"></div>
+        <a id="logo-container" href="#"><img class="logo" src="../images/opplogo.png"
+                alt="Okotoks Pizza Logo"></a>
+        <div id="nav">
+            <img id="menu-icon" src="../images/menu.png" alt="menu select icon">
+            <input class="toggle" type="checkbox">
+            <nav class="nav">
+                <a href="pages/Menu.html">Menu</a>
+                <a href="pages/AboutUs.html">About Us</a>
+                <a href="https://restaurantguru.com/Savona-Pizzeria-Calgary/reviews?bylang=1">Reviews</a>
+                <a href="pages/AboutUs.html#contact">Contact Us</a>
+                <a href="pages/AboutUs.html#maps">Location</a>
+            </nav>
+        </div>
+
     </header>
+
+    <a id="up" href="#header"><img src="../images/up-arrow-circle.png" alt="up arrow icon"></a>
 
     <div id="background">
         <iframe id="video"
@@ -103,7 +114,7 @@
 
     </section>
 
-    <article>
+    <article id="commercial">
         <h2>Commercial</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur amet atque nemo reprehenderit non
             excepturi, tenetur cum ea? Libero quo aliquam mollitia? Eos at molestias aliquid est omnis aliquam quo?

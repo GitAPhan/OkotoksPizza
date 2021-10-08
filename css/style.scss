@@ -1,0 +1,160 @@
+@import 'global';
+@import 'header';
+
+article {
+    padding: 40px 10px 10px 10px;
+}
+
+section {
+    position: relative;
+    display: grid;
+    place-items: center;
+
+    img {
+        border-radius: 8px;
+        border       : 1px solid #ddd;
+        padding      : 5px;
+        height       : 150px;
+    }
+}
+
+.blur {
+    filter  : blur(5px);
+    position: relative;
+    top     : 0px;
+    left    : 0px;
+    z-index : 1;
+}
+
+.bottom {
+    opacity: 1;
+    position: absolute;
+    top     : 0px;
+    left    : 0px;
+    z-index : 3;
+
+    :hover {
+        opacity   : 0;
+        transition: all 1s ease-in-out;
+    }
+}
+
+span {
+    display       : inline-block;
+    position      : relative;
+    text-align    : center;
+    color         : rgba(27, 24, 185, 0.13);
+}
+
+p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size  : medium;
+    font-weight: lighter;
+}
+
+h1 {
+    color: blue;
+}
+
+h3 {
+    color: blueviolet;
+}
+
+#list {
+    padding        : 20px;
+    list-style-type: square;
+}
+
+header>a:visited {
+    color      : chartreuse;
+    font-weight: bold;
+}
+
+h3+h2 {
+    padding   : 20px;
+    font-style: italic;
+    color     : cyan;
+}
+
+a:link {
+    color: darkgreen;
+}
+
+a:active {
+    font-size: 30px;
+}
+
+.hidden {
+    position      : absolute;
+    height        : 130px;
+    text-align    : center;
+    vertical-align: middle;
+    top           : 50%;
+    left          : 50%;
+    transform     : translate(-50%, -50%);
+    overflow      : hidden;
+    z-index       : 2;
+    color         : rgb(0, 0, 0);
+    text-shadow   : 1px 1px 1px rgb(190, 190, 190);
+}
+
+body {
+    background-color: $bg_color;
+    display: grid;
+    place-items: center;
+    width: 100vw;
+}
+
+#background {
+    position: fixed;
+    z-index : -99;
+    top     : 0px;
+    opacity : 0%;
+    width   : 100%;
+    height  : 100%;
+}
+
+.video {
+    border: 0px;
+    padding-bottom: 20px;
+}
+
+#commercial {
+    display: grid;
+    place-items: center;
+
+    p {
+        padding: 20px;
+    }
+}
+
+#header {
+    width: 100%;
+}
+
+@include scroll_up(10px, 25px);
+
+footer {
+    position        : fixed;
+    bottom          : 0;
+    left            : 0;
+    width           : 100%;
+    background-color: $ftbg_color;
+    display         : grid;
+    grid-auto-flow  : column;
+    place-items     : center;
+    z-index         : 4;
+}
+
+@media only screen and (min-width: 600px) {
+    section {
+        width: 100%;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    footer {
+        position: relative;
+    }
+}

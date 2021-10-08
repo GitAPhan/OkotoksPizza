@@ -1,0 +1,156 @@
+* {
+    margin     : 0;
+    padding    : 0;
+    font-family: sans-serif;
+}
+
+img {
+    max-width: 100%;
+    padding  : 0;
+}
+
+// Branding colors
+
+$bg_color            : burlywood;
+// background color of website
+$ftbg_color          : darkgoldenrod;
+// background color of footer
+$header_bg_color_prim: rgba(255, 175, 1, 0.541);
+$header_bg_color_sec : chocolate;
+$header_bg_color_tert: crimson;
+// background colors of header
+
+
+
+// image_hover color selector
+
+$ihc_border: white;
+// border color
+$ihc_text  : white;
+// text color
+$ihc_textbg: black;
+// text background color
+$ihc_mask  : rgba(255, 129, 8, .7);
+
+// Image mask layout
+// 
+// <div class="shell">
+//      <img>
+//      <div class="mask">
+//          <h2>
+//          <p>
+//          <a>
+//      </div>
+// </div>
+
+
+@mixin image_hover($width, $height) {
+
+    .shell {
+        width        : $width;
+        height       : $height;
+        margin       : 10px;
+        border       : 2px solid $ihc_border;
+        border-radius: 13%;
+        overflow     : hidden;
+        position     : relative;
+        text-align   : center;
+    }
+
+    .shell .mask {
+        width           : $width;
+        height          : $height;
+        position        : absolute;
+        overflow        : hidden;
+        top             : 0;
+        left            : 0;
+        opacity         : 0;
+        background-color: $ihc_mask;
+        transition      : all 0.4s ease-in-out;
+    }
+
+    .shell img {
+        display   : block;
+        position  : relative;
+        width     : $width;
+        transition: all 0.2s linear;
+    }
+
+    .shell h2 {
+        text-transform: uppercase;
+        color         : $ihc_text;
+        text-align    : center;
+        position      : relative;
+        font-size     : 1em;
+        padding       : 10px;
+        background    : $ihc_textbg;
+        margin        : 20px 0 0 0;
+        transform     : translateY(-100px);
+        opacity       : 0;
+        transition    : all 0.2s ease-in-out;
+    }
+
+    .shell p {
+        font-style: italic;
+        font-size : .7em;
+        position  : relative;
+        color     : $ihc_text;
+        padding   : 10px 20px 20px;
+        text-align: center;
+        transform : translateY(100px);
+        opacity   : 0;
+        transition: all 0.2s linear;
+    }
+
+    .shell .info {
+        display        : inline-block;
+        text-decoration: none;
+        padding        : 7px 14px;
+        background     : $ihc_textbg;
+        color          : $ihc_text;
+        text-transform : uppercase;
+        box-shadow     : 0 0 1px black;
+        opacity        : 0;
+        transition     : all 0.2s ease-in-out
+    }
+
+    .shell .info:hover {
+        box-shadow: 0 0 5px black;
+    }
+
+    .shell:hover img {
+        transform: scale(1.1);
+    }
+
+    .shell:hover .mask {
+        opacity: 1;
+    }
+
+    .shell:hover h2,
+    .shell:hover p,
+    .shell:hover .info {
+        opacity  : 1;
+        transform: translateY(0px);
+    }
+
+    .shell:hover p {
+        transition-delay: 0.1s;
+    }
+
+    .shell:hover .info {
+        transition-delay: 0.2s;
+    }
+
+}
+
+@mixin scroll_up($right, $bottom) {
+    #up {
+        position: fixed;
+        width   : 40px;
+        right   : $right;
+        bottom  : $bottom;
+        opacity : .3;
+        z-index : 4;
+    }
+
+}
