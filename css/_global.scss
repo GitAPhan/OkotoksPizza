@@ -1,7 +1,9 @@
 * {
     margin     : 0;
     padding    : 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-weight: normal;
 }
 
 img {
@@ -155,8 +157,14 @@ $ihc_mask  : rgba(255, 129, 8, .7);
 
 }
 
+
+// index photo transitions
 @keyframes photo_transition {
     0% {
+        opacity: 100%;
+    }
+
+    20% {
         opacity: 100%;
     }
 
@@ -169,6 +177,10 @@ $ihc_mask  : rgba(255, 129, 8, .7);
     }
 
     75% {
+        opacity: 0%;
+    }
+
+    90% {
         opacity: 0%;
     }
 
@@ -186,7 +198,15 @@ $ihc_mask  : rgba(255, 129, 8, .7);
         opacity: 0%;
     }
 
+    15% {
+        opacity: 0%;
+    }
+
     23% {
+        opacity: 100%;
+    }
+
+    45% {
         opacity: 100%;
     }
 
@@ -212,7 +232,15 @@ $ihc_mask  : rgba(255, 129, 8, .7);
         opacity: 0%;
     }
 
+    40% {
+        opacity: 0%;
+    }
+
     48% {
+        opacity: 100%;
+    }
+
+    70% {
         opacity: 100%;
     }
 
@@ -238,11 +266,36 @@ $ihc_mask  : rgba(255, 129, 8, .7);
         opacity: 0%;
     }
 
-    72% {
+    65% {
+        opacity: 0%;
+    }
+
+    73% {
+        opacity: 100%;
+    }
+
+    95% {
         opacity: 100%;
     }
 
     100% {
         opacity: 0%;
+    }
+}
+
+@keyframes open {
+    0% {
+        width: 1%;
+        height: 3%;
+    }
+
+    55% {
+        width: 80%;
+        height: 3%;
+    }
+
+    100% {
+        width: 80%;
+        height: 40%;
     }
 }

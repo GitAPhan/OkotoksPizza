@@ -1,10 +1,6 @@
 @import 'global';
 
 
-body {
-    background-color: black;
-}
-
 .body {
     position        : relative;
     display         : grid;
@@ -12,15 +8,21 @@ body {
     align-items     : start;
     min-height      : 100vh;
     z-index         : 1;
-    background-color: rgba(0, 0, 0, 0.459);
+    background-color: rgba(0, 0, 0, 0.411);
+    overflow: hidden;
 
     >div {
+        place-self : center;
         text-align : center;
         color      : white;
         display    : grid;
         place-items: center;
         row-gap    : 10px;
-        height: 100%;
+        height     : 80vh;
+
+        >a {
+            font-weight: 200;
+        }
     }
 
     .address {
@@ -30,12 +32,12 @@ body {
 }
 
 .logo {
-    position: relative;
-    width   : 160px;
+    position      : relative;
+    width         : 170px;
+    padding-bottom: 5vh;
 }
 
 .bg_images {
-
     >img {
         position  : absolute;
         top       : 0px;
@@ -47,23 +49,99 @@ body {
     }
 
     :nth-child(1) {
-        animation: photo_transition 20s infinite;
+        animation: photo_transition 40s infinite;
     }
 
     :nth-child(2) {
-        animation: photo_transition1 20s infinite;
+        animation: photo_transition1 40s infinite;
     }
 
     :nth-child(3) {
-        animation: photo_transition2 20s infinite;
+        animation: photo_transition2 40s infinite;
     }
 
     :nth-child(4) {
-
-        animation: photo_transition3 20s infinite;
+        animation: photo_transition3 40s infinite;
     }
 }
 
+nav {
+    display       : grid;
+    grid-auto-flow: column;
+    place-items   : center;
+    column-gap    : 20px;
+    max-width     : 90vw;
+
+    >a {
+        text-decoration: none;
+        color          : white;
+        border         : white 2px solid;
+        padding        : 15px 25px;
+        font-size      : .8em;
+        font-weight    : 200;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.705);
+            box-shadow      : 2px 2px 5px black;
+        }
+    }
+}
+
+#maps {
+    display: none;
+    opacity: 0%;
+}
+
+#close {
+    right           : calc(10% - .75rem);
+    top             : calc(30% - .75rem);
+    width           : 1.5rem;
+    height          : 1.5rem;
+    position        : absolute;
+    display         : flex;
+    z-index         : 4;
+    align-items     : center;
+    justify-content : center;
+    background-color: black;
+    border-radius   : 50%;
+    color           : white;
+    cursor          : pointer;
+    text-decoration : none;
+    opacity: 80%;
+}
+
+#bg_close {
+    position: absolute;
+    width   : 100%;
+    height  : 100%;
+    z-index : 0;
+}
+
+#maps:target {
+    position        : absolute;
+    display         : grid;
+    place-items     : center;
+    height          : 100%;
+    width           : 100%;
+    background-color: rgba(0, 0, 0, 0.575);
+    top             : 0px;
+    z-index         : 3;
+    row-gap         : 20px;
+    opacity         : 100%;
+
+    .map_container {
+        animation: open 1s ease-in-out;
+        overflow : hidden;
+        width  : 80%;
+        height : 40%;
+        z-index: 2;
+    }
+}
+
+iframe {
+    width : 80vw;
+    height: 40vh;
+}
 
 
 @media only screen and (min-width: 600px) {}
