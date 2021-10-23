@@ -336,7 +336,7 @@ nav > a:hover {
 }
 
 #maps {
-  display: none;
+  pointer-events: none;
   opacity: 0%;
 }
 
@@ -361,7 +361,9 @@ nav > a:hover {
   color: white;
   cursor: pointer;
   text-decoration: none;
-  opacity: 80%;
+  -webkit-transition: opacity .4s ease-in-out 1s;
+  transition: opacity .4s ease-in-out 1s;
+  opacity: 0;
 }
 
 #bg_close {
@@ -369,6 +371,10 @@ nav > a:hover {
   width: 100%;
   height: 100%;
   z-index: 0;
+}
+
+#maps:target > #close {
+  opacity: 1;
 }
 
 #maps:target {
@@ -383,6 +389,7 @@ nav > a:hover {
   z-index: 3;
   row-gap: 20px;
   opacity: 100%;
+  pointer-events: auto;
 }
 
 #maps:target .map_container {

@@ -384,7 +384,6 @@ body {
 }
 
 .menu_container img {
-  border-radius: 35px;
   padding: 10px 0px;
 }
 
@@ -418,8 +417,7 @@ body {
 }
 
 .food {
-  border-left: white 1px solid;
-  border-top: white 1px solid;
+  border-bottom: white 1px dashed;
   padding: 25px;
 }
 

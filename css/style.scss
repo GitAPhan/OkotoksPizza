@@ -1,4 +1,5 @@
 @import 'global';
+@import 'color';
 
 
 .body {
@@ -9,7 +10,7 @@
     min-height      : 100vh;
     z-index         : 1;
     background-color: rgba(0, 0, 0, 0.411);
-    overflow: hidden;
+    overflow        : hidden;
 
     >div {
         place-self : center;
@@ -27,7 +28,7 @@
 
     .address {
         text-decoration: none;
-        color          : white;
+        color          : $font_prim;
     }
 }
 
@@ -74,7 +75,7 @@ nav {
 
     >a {
         text-decoration: none;
-        color          : white;
+        color          : $font_prim;
         border         : white 2px solid;
         padding        : 15px 25px;
         font-size      : .8em;
@@ -88,7 +89,8 @@ nav {
 }
 
 #maps {
-    display: none;
+    // display: none;
+    pointer-events: none;
     opacity: 0%;
 }
 
@@ -104,17 +106,24 @@ nav {
     justify-content : center;
     background-color: black;
     border-radius   : 50%;
-    color           : white;
+    color           : $font_prim;
     cursor          : pointer;
     text-decoration : none;
-    opacity: 80%;
+    transition      : opacity .4s ease-in-out 1s;
+    opacity: 0;
+
 }
+
 
 #bg_close {
     position: absolute;
     width   : 100%;
     height  : 100%;
     z-index : 0;
+}
+
+#maps:target>#close {
+    opacity: 1;
 }
 
 #maps:target {
@@ -128,13 +137,15 @@ nav {
     z-index         : 3;
     row-gap         : 20px;
     opacity         : 100%;
+    pointer-events: auto;
 
     .map_container {
         animation: open 1s ease-in-out;
         overflow : hidden;
-        width  : 80%;
-        height : 40%;
-        z-index: 2;
+        width    : 80%;
+        height   : 40%;
+        z-index  : 2;
+        
     }
 }
 
@@ -142,8 +153,3 @@ iframe {
     width : 80vw;
     height: 40vh;
 }
-
-
-@media only screen and (min-width: 600px) {}
-
-@media only screen and (min-width: 1000px) {}
