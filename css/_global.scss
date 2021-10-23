@@ -21,7 +21,7 @@ $ihc_text  : white;
 // text color
 $ihc_textbg: black;
 // text background color
-$ihc_mask  : rgba(255, 129, 8, .7);
+$ihc_mask  : rgba(255, 86, 8, 0.7);
 
 // Image mask layout
 // 
@@ -30,7 +30,7 @@ $ihc_mask  : rgba(255, 129, 8, .7);
 //      <div class="mask">
 //          <h2>
 //          <p>
-//          <a>
+//          <a class="info">
 //      </div>
 // </div>
 
@@ -39,18 +39,20 @@ $ihc_mask  : rgba(255, 129, 8, .7);
 
     .shell {
         width        : $width;
-        height       : $height;
-        margin       : 10px;
+        // height       : $height;
+        // margin-top       : 10px;
         border       : 2px solid $ihc_border;
-        border-radius: 13%;
+        // border-radius: 13%;
         overflow     : hidden;
         position     : relative;
-        text-align   : center;
+        text-align   : center; 
+        display: grid;
+        place-items: center;
     }
 
     .shell .mask {
-        width           : $width;
-        height          : $height;
+        width           : 100%;
+        height          : 100%;
         position        : absolute;
         overflow        : hidden;
         top             : 0;
@@ -106,7 +108,7 @@ $ihc_mask  : rgba(255, 129, 8, .7);
     }
 
     .shell .info:hover {
-        box-shadow: 0 0 5px black;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.11);
     }
 
     .shell:hover img {

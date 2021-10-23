@@ -372,7 +372,7 @@ img {
 }
 
 body {
-  background-color: #ff3822;
+  background-color: burlywood;
 }
 
 .menu_container {
@@ -383,8 +383,135 @@ body {
   padding: 20px;
 }
 
-.menu_container img {
+.menu_selector {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  place-items: center;
+  -webkit-column-gap: 2px;
+          column-gap: 2px;
+}
+
+.menu_selector > label {
   padding: 10px 0px;
+  background-color: burlywood;
+  width: 100%;
+  text-align: center;
+  -webkit-transition: background-color .4s ease-in;
+  transition: background-color .4s ease-in;
+}
+
+.food {
+  overflow: hidden;
+}
+
+.food .shell {
+  width: 100%;
+  border: 2px solid white;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.food .shell .mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color: rgba(255, 86, 8, 0.7);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.food .shell img {
+  display: block;
+  position: relative;
+  width: 100%;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.food .shell h2 {
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  position: relative;
+  font-size: 1em;
+  padding: 10px;
+  background: black;
+  margin: 20px 0 0 0;
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.food .shell p {
+  font-style: italic;
+  font-size: .7em;
+  position: relative;
+  color: white;
+  padding: 10px 20px 20px;
+  text-align: center;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  opacity: 0;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.food .shell .info {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  background: black;
+  color: white;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0 0 1px black;
+          box-shadow: 0 0 1px black;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.food .shell .info:hover {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.11);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.11);
+}
+
+.food .shell:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.food .shell:hover .mask {
+  opacity: 1;
+}
+
+.food .shell:hover h2,
+.food .shell:hover p,
+.food .shell:hover .info {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.food .shell:hover p {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.food .shell:hover .info {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
 }
 
 #appetizer {
@@ -413,7 +540,7 @@ body {
   -webkit-column-gap: 20px;
           column-gap: 20px;
   row-gap: 20px;
-  margin: 30px 0px;
+  background-color: #ff3822;
 }
 
 .food {
@@ -433,11 +560,8 @@ h3 {
   text-align: center;
 }
 
-input {
-  position: absolute;
-  top: 0px;
-  width: 40px;
-  height: 40px;
+#appetizer:checked ~ .menu_selector > label:nth-child(1) {
+  background-color: #ff3822;
 }
 
 #appetizer:checked ~ .appetizer_container {
@@ -445,14 +569,26 @@ input {
   display: grid;
 }
 
+#pasta:checked ~ .menu_selector > label:nth-child(2) {
+  background-color: #ff3822;
+}
+
 #pasta:checked ~ .pasta_container {
   display: -ms-grid;
   display: grid;
 }
 
+#pizza:checked ~ .menu_selector > label:nth-child(3) {
+  background-color: #ff3822;
+}
+
 #pizza:checked ~ .pizza_container {
   display: -ms-grid;
   display: grid;
+}
+
+#calzone:checked ~ .menu_selector > label:nth-child(4) {
+  background-color: #ff3822;
 }
 
 #calzone:checked ~ .calzone_container {
