@@ -1,45 +1,91 @@
 @import 'global';
 @import 'header';
 
-#menu-container {
-    margin-top           : 10px;
-    position             : relative;
-    display              : grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    place-items          : center;
-    column-gap           : 20px;
-    row-gap              : 20px;
-    padding              : 10px;
-    font-size            : .7rem;
-}
-
-.menu-item {
-    display      : grid;
-    place-items  : center;
-    padding      : 10px;
-    border       : 1px solid black;
-    border-radius: 12%;
-
-    >img {
-        width        : 250px;
-        border-radius: 20%;
-    }
-}
-
-
-h3+p {
-    padding: 10px;
-}
 
 body {
     background-color: $bg_color;
 }
 
-#title {
-    margin-top: 10px;
-    font-size : 1.5em;
+.menu_container {
+    display       : grid;
+    // place-items: center;
+    position      : relative;
+    margin-top    : 20px;
+    padding       : 20px;
+
+   img {
+       border-radius: 35px;
+       padding: 10px 0px;
+   }
+}
+
+#appetizer {
+        left: 60px;
+    }
+
+    #pasta {
+        left: 110px;
+    }
+
+    #pizza {
+        left: 160px;
+    }
+
+    #calzone {
+        left: 210px;
+    }
+.appetizer_container,
+.pasta_container,
+.pizza_container,
+.calzone_container {
+    display              : none;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    column-gap           : 20px;
+    row-gap              : 20px;
+    margin               : 30px 0px;
+    // box-shadow: 1px 1px 4px black;
+}
+
+.food {
+    border-left: white 1px solid;
+    border-top: white 1px solid;
+    // border-radius: 15px;
+    padding: 25px;
+}
+
+.price {
+    color: white;
+    font-size: 1.1em;
+    padding: 5px;
+    text-align: end;
+}
+
+h3 {
+    font-weight: 700;
     text-align: center;
 }
 
-@include image_hover(150px, 150px);
+input {
+    position: absolute;
+    top: 0px;
+    width: 40px;
+    height: 40px;
+}
+
+#appetizer:checked~.appetizer_container {
+    display: grid;
+}
+
+#pasta:checked~.pasta_container {
+    display: grid;
+}
+
+#pizza:checked~.pizza_container {
+    display: grid;
+}
+
+#calzone:checked~.calzone_container {
+    display: grid;
+}
+
 @include scroll_up(10px, 10px);

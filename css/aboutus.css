@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 img {
@@ -9,8 +9,160 @@ img {
   padding: 0;
 }
 
+@-webkit-keyframes photo_transition {
+  0% {
+    opacity: 100%;
+  }
+  25% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  75% {
+    opacity: 0%;
+  }
+  98% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes photo_transition {
+  0% {
+    opacity: 100%;
+  }
+  25% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  75% {
+    opacity: 0%;
+  }
+  98% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@-webkit-keyframes photo_transition1 {
+  0% {
+    opacity: 0%;
+  }
+  23% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  75% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+@keyframes photo_transition1 {
+  0% {
+    opacity: 0%;
+  }
+  23% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  75% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+@-webkit-keyframes photo_transition2 {
+  0% {
+    opacity: 0%;
+  }
+  25% {
+    opacity: 0%;
+  }
+  48% {
+    opacity: 100%;
+  }
+  75% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+@keyframes photo_transition2 {
+  0% {
+    opacity: 0%;
+  }
+  25% {
+    opacity: 0%;
+  }
+  48% {
+    opacity: 100%;
+  }
+  75% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+@-webkit-keyframes photo_transition3 {
+  0% {
+    opacity: 0%;
+  }
+  25% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  72% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+@keyframes photo_transition3 {
+  0% {
+    opacity: 0%;
+  }
+  25% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  72% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
 .logo {
   height: 60px;
+  -webkit-filter: drop-shadow(2px 2px 4px black);
+          filter: drop-shadow(2px 2px 4px black);
 }
 
 #header {
@@ -18,9 +170,9 @@ img {
   display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
-  background-color: rgba(255, 175, 1, 0.541);
-  -webkit-box-shadow: 0px 0px 5px black;
-          box-shadow: 0px 0px 5px black;
+  background-color: #ff3822;
+  -webkit-box-shadow: 5px 5px 15px #b89944;
+          box-shadow: 5px 5px 15px #b89944;
 }
 
 .nav > a {
@@ -122,7 +274,7 @@ img {
   #spacer {
     display: block;
     position: absolute;
-    background-color: burlywood;
+    background-color: #ff3822;
     height: 10px;
     width: 100vw;
     top: 0;
@@ -153,7 +305,7 @@ body {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  background-color: burlywood;
+  background-color: #ff3822;
   row-gap: 10px;
 }
 

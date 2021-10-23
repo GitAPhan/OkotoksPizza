@@ -1,13 +1,15 @@
 .logo {
     height: 60px;
+    filter: drop-shadow(2px 2px 4px black);
 }
 
 #header {
     padding         : 3px;
     display         : grid;
     grid-auto-flow  : column;
-    background-color: $header_bg_color_prim;
-    box-shadow      : 0px 0px 5px black;
+    background-color: $bg_color;
+    // background-image: url(https://png.pngtree.com/background/20210714/original/pngtree-red-gradient-matte-background-picture-image_1216345.jpg);
+    box-shadow      : 5px 5px 15px #b89944;
 }
 
 .nav>a {

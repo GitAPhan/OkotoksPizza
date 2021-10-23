@@ -1,7 +1,7 @@
 * {
     margin     : 0;
     padding    : 0;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 img {
@@ -11,7 +11,7 @@ img {
 
 // Branding colors
 
-$bg_color            : burlywood;
+$bg_color            : #ff3822;
 // background color of website
 $ftbg_color          : darkgoldenrod;
 // background color of footer
@@ -153,4 +153,96 @@ $ihc_mask  : rgba(255, 129, 8, .7);
         z-index : 4;
     }
 
+}
+
+@keyframes photo_transition {
+    0% {
+        opacity: 100%;
+    }
+
+    25% {
+        opacity: 0%;
+    }
+
+    50% {
+        opacity: 0%;
+    }
+
+    75% {
+        opacity: 0%;
+    }
+
+    98% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes photo_transition1 {
+    0% {
+        opacity: 0%;
+    }
+
+    23% {
+        opacity: 100%;
+    }
+
+    50% {
+        opacity: 0%;
+    }
+
+    75% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes photo_transition2 {
+    0% {
+        opacity: 0%;
+    }
+
+    25% {
+        opacity: 0%;
+    }
+
+    48% {
+        opacity: 100%;
+    }
+
+    75% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes photo_transition3 {
+    0% {
+        opacity: 0%;
+    }
+
+    25% {
+        opacity: 0%;
+    }
+
+    50% {
+        opacity: 0%;
+    }
+
+    72% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
 }
