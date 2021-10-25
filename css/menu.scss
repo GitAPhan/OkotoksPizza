@@ -4,7 +4,9 @@
 
 
 body {
-    background-color: burlywood;
+    background-image     : url(https://img.wallpapersafari.com/desktop/1920/1080/11/16/4jUT2Y.jpg);
+    background-position  : center;
+    background-attachment: fixed;
 }
 
 .menu_container {
@@ -13,6 +15,10 @@ body {
     margin-top: 20px;
     padding   : 20px;
 
+
+    input {
+        display: none;
+    }
 }
 
 .menu_selector {
@@ -26,7 +32,8 @@ body {
         background-color: burlywood;
         width           : 100%;
         text-align      : center;
-        transition      : background-color .4s ease-in;
+        transition      : all .4s ease-in;
+        font-weight     : 400
     }
 }
 
@@ -56,7 +63,7 @@ body {
 .pizza_container,
 .calzone_container {
     display              : none;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     column-gap           : 20px;
     row-gap              : 20px;
     background-color     : $bg_color;
@@ -79,21 +86,13 @@ h3 {
     text-align : center;
 }
 
-// input {
-//     position: absolute;
-//     top     : -60px;
-//     width   : 200px;
-//     height  : 200px;
-//     opacity : 0%;
-//     transform: scaleY(.2);
-// }
-
 
 
 #appetizer:checked {
 
     ~.menu_selector>label:nth-child(1) {
         background-color: $bg_color;
+        color           : white;
     }
 
     ~.appetizer_container {
@@ -105,6 +104,7 @@ h3 {
 
     ~.menu_selector>label:nth-child(2) {
         background-color: $bg_color;
+        color           : white;
     }
 
     ~.pasta_container {
@@ -116,6 +116,7 @@ h3 {
 
     ~.menu_selector>label:nth-child(3) {
         background-color: $bg_color;
+        color           : white;
     }
 
     ~.pizza_container {
@@ -127,6 +128,7 @@ h3 {
 
     ~.menu_selector>label:nth-child(4) {
         background-color: $bg_color;
+        color           : white;
     }
 
     ~.calzone_container {
