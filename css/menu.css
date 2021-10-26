@@ -382,7 +382,7 @@ body {
   display: grid;
   position: relative;
   margin-top: 20px;
-  padding: 20px;
+  padding: 10px;
 }
 
 .menu_container input {
@@ -395,8 +395,8 @@ body {
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
   place-items: center;
-  -webkit-column-gap: 2px;
-          column-gap: 2px;
+  -webkit-column-gap: 1px;
+          column-gap: 1px;
 }
 
 .menu_selector > label {
@@ -407,6 +407,66 @@ body {
   -webkit-transition: all .4s ease-in;
   transition: all .4s ease-in;
   font-weight: 400;
+}
+
+.pizza_container > .pizza,
+.calzone_container > .calzone {
+  font-size: .7rem;
+}
+
+.pizza_container > .pizza .mask h2,
+.calzone_container > .calzone .mask h2 {
+  opacity: 0;
+  width: 100%;
+}
+
+.pizza_container > .pizza .mask > .small_price_container > h2,
+.calzone_container > .calzone .mask > .small_price_container > h2 {
+  text-align: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.pizza_container > .pizza .small_price_container,
+.calzone_container > .calzone .small_price_container {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  width: 100%;
+  height: 80%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  justify-items: center;
+  -ms-grid-row-align: end;
+      align-self: end;
+  grid-auto-flow: column;
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
+}
+
+.pizza_container > .pizza .small_price_container h2:not(h2:nth-child(5)),
+.calzone_container > .calzone .small_price_container h2:not(h2:nth-child(5)) {
+  border-right: black 1px solid;
+}
+
+.calzone > .shell > .mask > .small_price_container > .no_border {
+  border-right: none;
+}
+
+.pizza_container .price_container,
+.calzone_container .price_container {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border-bottom: white dashed 1px;
+}
+
+.pizza_container .price_container .price,
+.calzone_container .price_container .price {
+  font-size: 1em;
+  text-align: center;
+  padding: 5px;
 }
 
 .food {
@@ -428,6 +488,9 @@ body {
   width: 100%;
   height: 100%;
   position: absolute;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
   overflow: hidden;
   top: 0;
   left: 0;
@@ -450,37 +513,50 @@ body {
 .food .shell h2 {
   display: inline-block;
   color: white;
-  position: absolute;
+  position: relative;
   font-size: 1em;
-  font-weight: 600;
-  padding: 5px;
-  bottom: 0px;
-  left: calc(50% - 26.5px);
+  font-weight: 800;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
   opacity: 1;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  text-shadow: 0px 0px 0px white;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  right: calc(50% - 31.5px);
 }
 
 .food .shell p {
   font-style: italic;
-  font-size: .7em;
+  font-size: .7rem;
   position: relative;
   color: white;
-  padding: 10px 20px 20px;
   opacity: 1;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
+  padding: 0px 5px;
+  font-weight: 600;
 }
 
-.food .shell .info {
-  display: block;
-  padding: 10px 20px;
-  font-size: .8em;
+.food .shell h3 {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 5px;
+  font-size: .8rem;
   background: black;
   color: white;
   opacity: .75;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  text-shadow: 0px 0px 0px white;
+  font-weight: 700;
+  right: 0px;
 }
 
 .food .shell:hover img {
@@ -493,9 +569,12 @@ body {
 }
 
 .food .shell:hover h2 {
-  left: calc(100% - 65px);
   color: black;
-  font-size: 1.2em;
+  font-size: 1.1em;
+  text-shadow: 1px 1px 3px white;
+  opacity: 1;
+  text-align: right;
+  right: 0px;
 }
 
 .food .shell:hover p {
@@ -504,28 +583,17 @@ body {
           transition-delay: 0.1s;
 }
 
-.food .shell:hover .info {
-  padding: 10px 0px 0px 0px;
+.food .shell:hover h3 {
+  text-shadow: 1px 1px 2px white;
   color: black;
   background-color: rgba(0, 0, 0, 0);
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
-}
-
-#appetizer {
-  left: 60px;
-}
-
-#pasta {
-  left: 110px;
-}
-
-#pizza {
-  left: 160px;
-}
-
-#calzone {
-  left: 210px;
+  font-weight: 900;
+  -ms-grid-column-align: start;
+      justify-self: start;
+  text-align: left;
+  left: 0px;
 }
 
 .appetizer_container,
@@ -535,10 +603,8 @@ body {
   display: none;
   -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  -webkit-column-gap: 20px;
-          column-gap: 20px;
-  row-gap: 20px;
   background-color: red;
+  position: relative;
 }
 
 .food {
@@ -546,16 +612,13 @@ body {
   padding: 25px;
 }
 
-.price {
-  color: white;
-  font-size: 1.1em;
-  padding: 5px;
-  text-align: end;
+.appetizer h2,
+.pasta h2 {
+  width: 63px;
 }
 
 h3 {
   font-weight: 700;
-  text-align: center;
 }
 
 #appetizer:checked ~ .menu_selector > label:nth-child(1) {

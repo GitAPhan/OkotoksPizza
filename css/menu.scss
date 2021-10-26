@@ -13,7 +13,7 @@ body {
     display   : grid;
     position  : relative;
     margin-top: 20px;
-    padding   : 20px;
+    padding   : 10px;
 
 
     input {
@@ -25,7 +25,7 @@ body {
     display              : grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     place-items          : center;
-    column-gap           : 2px;
+    column-gap           : 1px;
 
     >label {
         padding         : 10px 0px;
@@ -37,25 +37,75 @@ body {
     }
 }
 
+.pizza_container>.pizza,
+.calzone_container>.calzone {
+    font-size: .7rem;
+
+    .mask {
+
+        h2 {
+            opacity: 0;
+            width  : 100%;
+        }
+
+
+
+        >.small_price_container>h2 {
+
+            text-align  : center;
+            justify-self: center;
+        }
+    }
+
+    .small_price_container {
+        display                 : grid;
+        position                : relative;
+        width                   : 100%;
+        height                  : 80%;
+        justify-self            : center;
+        justify-items           : center;
+        align-self              : end;
+        // grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+        grid-auto-flow          : column;
+        column-gap              : 5px;
+
+        h2:not(h2:nth-child(5)) {
+            border-right: black 1px solid;
+        }
+
+        h2:nth-child(5) {
+            // grid-column: span 2;
+        }
+    }
+}
+
+.calzone>.shell>.mask>.small_price_container>.no_border {
+
+    border-right: none;
+}
+
+.pizza_container,
+.calzone_container {
+
+    .price_container {
+        position     : relative;
+        display      : grid;
+        place-items  : center;
+        border-bottom: white dashed 1px;
+
+
+        .price {
+            font-size : 1em;
+            text-align: center;
+            padding   : 5px;
+        }
+    }
+}
+
+
 .food {
     @include image_hover(100%, 100%);
     overflow: hidden;
-}
-
-#appetizer {
-    left: 60px;
-}
-
-#pasta {
-    left: 110px;
-}
-
-#pizza {
-    left: 160px;
-}
-
-#calzone {
-    left: 210px;
 }
 
 .appetizer_container,
@@ -64,9 +114,8 @@ body {
 .calzone_container {
     display              : none;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    column-gap           : 20px;
-    row-gap              : 20px;
     background-color     : $bg_color;
+    position             : relative;
 }
 
 .food {
@@ -74,16 +123,15 @@ body {
     padding      : 25px;
 }
 
-.price {
-    color     : white;
-    font-size : 1.1em;
-    padding   : 5px;
-    text-align: end;
+.appetizer,
+.pasta {
+    h2 {
+        width: 63px;
+    }
 }
 
 h3 {
     font-weight: 700;
-    text-align : center;
 }
 
 
