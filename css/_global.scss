@@ -2,8 +2,9 @@
     margin        : 0;
     padding       : 0;
     font-family   : sans-serif;
-    letter-spacing: 1px;
-    font-weight   : normal;
+    letter-spacing: 3px;
+    line-height: 1.5em;
+    font-weight   : 500;
 }
 
 img {
@@ -300,5 +301,59 @@ $ihc_mask  : rgba(255, 86, 8, 0.7);
     100% {
         width : 80%;
         height: 40%;
+    }
+}
+
+@keyframes photo_carousel {
+    0% {
+        opacity: 1;
+    }
+
+    33% {
+        opacity: 0;
+    }
+
+    66% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes photo_carousel1 {
+    0% {
+        opacity: 0;
+    }
+
+    33% {
+        opacity: 1;
+    }
+
+    66% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes photo_carousel2 {
+    0% {
+        opacity: 0;
+    }
+
+    33% {
+        opacity: 0;
+    }
+
+    66% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }

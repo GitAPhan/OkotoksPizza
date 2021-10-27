@@ -1,6 +1,10 @@
 @import 'global';
 @import 'color';
 
+body{
+    position: relative;
+    overflow: hidden;
+}
 
 .body {
     position        : relative;
@@ -152,4 +156,8 @@ nav {
 iframe {
     width : 80vw;
     height: 40vh;
+}
+
+p,a {
+    text-shadow: 1px 1px 2px black;
 }
