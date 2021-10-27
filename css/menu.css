@@ -552,11 +552,13 @@ body {
   -ms-flex-item-align: start;
       -ms-grid-row-align: start;
       align-self: start;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
   text-shadow: 0px 0px 0px white;
   font-weight: 700;
-  right: 0px;
+  left: 10px;
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
 }
 
 .food .shell:hover img {
@@ -586,14 +588,12 @@ body {
 .food .shell:hover h3 {
   text-shadow: 1px 1px 2px white;
   color: black;
-  background-color: rgba(0, 0, 0, 0);
-  -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s;
+  background: rgba(0, 0, 0, 0);
   font-weight: 900;
   -ms-grid-column-align: start;
       justify-self: start;
   text-align: left;
-  left: 0px;
+  left: 5px;
 }
 
 .appetizer_container,

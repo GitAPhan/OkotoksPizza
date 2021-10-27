@@ -65,16 +65,11 @@ body {
         justify-self            : center;
         justify-items           : center;
         align-self              : end;
-        // grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
         grid-auto-flow          : column;
         column-gap              : 5px;
 
         h2:not(h2:nth-child(5)) {
             border-right: black 1px solid;
-        }
-
-        h2:nth-child(5) {
-            // grid-column: span 2;
         }
     }
 }

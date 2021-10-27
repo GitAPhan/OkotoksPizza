@@ -1,25 +1,20 @@
 @import 'global';
+@import 'color';
 @import 'header';
 
-#maps {
-    position: relative;
-    width: 90%;
-    margin-bottom: 20px;
-}
-
-#header {
-    width: 100%;
-}
-
-body {
+article {
     display: grid;
-    place-items: center;
-    background-color: $bg_color;
-    row-gap: 10px;
-}
+    padding: 15px;
 
-h1, h2, h3, p {
-    padding: 20px;
+
+    >h3 {
+        font-size: 40px;
+    }
+
+    >img {
+        padding: 15px;
+        width: calc(100% - 30px);
+    }
 }
 
 @include scroll_up(10px, 10px);

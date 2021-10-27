@@ -250,7 +250,7 @@ img {
   display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
-  background-color: #ff3822;
+  background-color: red;
   -webkit-box-shadow: 5px 5px 15px #b89944;
           box-shadow: 5px 5px 15px #b89944;
 }
@@ -354,7 +354,7 @@ img {
   #spacer {
     display: block;
     position: absolute;
-    background-color: #ff3822;
+    background-color: red;
     height: 10px;
     width: 100vw;
     top: 0;
@@ -371,26 +371,19 @@ img {
   }
 }
 
-#maps {
-  position: relative;
-  width: 90%;
-  margin-bottom: 20px;
-}
-
-#header {
-  width: 100%;
-}
-
-body {
+article {
   display: -ms-grid;
   display: grid;
-  place-items: center;
-  background-color: #ff3822;
-  row-gap: 10px;
+  padding: 15px;
 }
 
-h1, h2, h3, p {
-  padding: 20px;
+article > h3 {
+  font-size: 40px;
+}
+
+article > img {
+  padding: 15px;
+  width: calc(100% - 30px);
 }
 
 #up {
