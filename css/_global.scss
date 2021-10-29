@@ -12,6 +12,9 @@ img {
     padding  : 0;
 }
 
+body {
+    overflow-x: hidden;
+}
 
 
 // image_hover color selector
@@ -156,7 +159,7 @@ $ihc_mask  : rgba(255, 86, 8, 0.7);
         right   : $right;
         bottom  : $bottom;
         opacity : .3;
-        z-index : 4;
+        z-index : 3;
     }
 
 }

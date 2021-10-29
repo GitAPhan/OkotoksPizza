@@ -12,6 +12,10 @@ img {
   padding: 0;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 @-webkit-keyframes photo_transition {
   0% {
     opacity: 100%;
