@@ -377,8 +377,8 @@ body {
           filter: drop-shadow(2px 2px 4px black);
   -webkit-transform: scale(1);
           transform: scale(1);
-  -webkit-transition: all .1s ease-in-out;
-  transition: all .1s ease-in-out;
+  -webkit-transition: all .1s ease-in-outsv;
+  transition: all .1s ease-in-outsv;
 }
 
 .logo:hover {
