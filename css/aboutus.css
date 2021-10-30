@@ -15,6 +15,7 @@ img {
 body {
   overflow-x: hidden;
   background-color: white;
+  width: 100%;
 }
 
 @-webkit-keyframes photo_transition {
@@ -790,7 +791,7 @@ main > img:nth-child(1) {
      object-fit: cover;
   -o-object-position: top center;
      object-position: top center;
-  height: 150px;
+  height: 100%;
   width: 100%;
 }
 
@@ -1013,6 +1014,9 @@ article > div:not(.youtube) {
   .staff .title {
     height: 300px;
   }
+  .family_hero {
+    height: 250px;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -1024,6 +1028,9 @@ article > div:not(.youtube) {
   article img {
     width: 80%;
     padding: 0px;
+  }
+  .family_hero {
+    height: 300px;
   }
   .youtube {
     width: 90%;

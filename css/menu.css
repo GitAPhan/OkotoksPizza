@@ -15,6 +15,7 @@ img {
 body {
   overflow-x: hidden;
   background-color: white;
+  width: 100%;
 }
 
 @-webkit-keyframes photo_transition {
@@ -783,6 +784,10 @@ body {
   display: none;
 }
 
+.menu_container .menu_selector {
+  width: 90%;
+}
+
 .promotional_banner {
   position: relative;
   height: 200px;
@@ -793,6 +798,7 @@ body {
   border: 2px white solid;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  overflow: hidden;
 }
 
 .promotional_banner img {
@@ -806,11 +812,11 @@ body {
 }
 
 .promotional_banner h1 {
-  width: 80%;
+  width: 77%;
   text-shadow: 2px 2px 5px black;
   color: white;
   position: relative;
-  padding: 25px;
+  padding: 20px 25px;
   text-align: left;
   font-size: calc(3vw + .9em);
 }
@@ -828,21 +834,21 @@ body {
   place-items: center;
   -webkit-column-gap: 1px;
           column-gap: 1px;
-  width: 100%;
   max-width: 525px;
+  margin: 0px 5px;
 }
 
 .menu_selector > label {
-  padding: 10px 0px;
+  padding: 10px 2px;
   background-color: white;
-  width: 100%;
+  width: 95%;
   text-align: center;
   -webkit-transition: .4s ease-in;
   transition: .4s ease-in;
   -webkit-transition-property: color, background-color;
   transition-property: color, background-color;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 10px;
   cursor: pointer;
 }
 
@@ -1109,8 +1115,13 @@ h3 {
 }
 
 @media only screen and (min-width: 765px) {
-  .menu_selector > label {
+  .menu_container > .menu_selector {
+    width: 100%;
+  }
+  .menu_container > .menu_selector > label {
     font-size: 16px;
+    width: 100%;
+    padding: 10px 0px;
   }
   .appetizer_container,
   .pasta_container,
@@ -1135,6 +1146,10 @@ h3 {
   .menu_container {
     padding: 25px;
   }
+  .promotional_banner h1 {
+    width: 60%;
+    padding: 15px 25px;
+  }
 }
 
 @media only screen and (min-width: 1100px) {
@@ -1144,6 +1159,11 @@ h3 {
   }
   .menu_selector > label {
     font-size: 18px;
+  }
+  .promotional_banner h1 {
+    width: 450px;
+    font-size: 37px;
+    padding: 10px 25px;
   }
 }
 
@@ -1156,6 +1176,9 @@ h3 {
   }
   .menu_selector {
     max-width: 1200px;
+  }
+  .promotional_banner h1 {
+    padding: 10px calc((100vw - 1200px)/2);
   }
 }
 /*# sourceMappingURL=menu.css.map */
