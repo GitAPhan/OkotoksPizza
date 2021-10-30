@@ -1,19 +1,22 @@
-@import 'global';
 @import 'color';
+@import 'global';
 @import 'header';
 
 
 body {
-    background-image     : url(https://img.wallpapersafari.com/desktop/1920/1080/11/16/4jUT2Y.jpg);
-    background-position  : center;
-    background-attachment: fixed;
+    position: relative;
 }
 
 .menu_container {
     display   : grid;
     position  : relative;
     margin-top: 20px;
-    padding   : 10px;
+    place-items: center;
+    padding-top: 100px;
+
+    >div {
+        width: 100%;
+    }
 
 
     input {
@@ -26,20 +29,23 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     place-items          : center;
     column-gap           : 1px;
+    width: 100%;    
+    max-width: 525px;
 
     >label {
         padding         : 10px 0px;
-        background-color: burlywood;
+        background-color: $C_color;
         width           : 100%;
         text-align      : center;
         transition      : all .4s ease-in;
-        font-weight     : 400
+        font-weight     : 400;
+        font-size: 12px;
     }
 }
 
 .pizza_container>.pizza,
 .calzone_container>.calzone {
-    font-size: .7rem;
+    // font-size: .7rem;
 
     .mask {
 
@@ -69,7 +75,7 @@ body {
         column-gap              : 5px;
 
         h2:not(h2:nth-child(5)) {
-            border-right: black 1px solid;
+            border-right: $fontB 1px solid;
         }
     }
 }
@@ -86,7 +92,7 @@ body {
         position     : relative;
         display      : grid;
         place-items  : center;
-        border-bottom: white dashed 1px;
+        border-bottom: $C_color dashed 1px;
 
 
         .price {
@@ -101,6 +107,7 @@ body {
 .food {
     @include image_hover(100%, 100%);
     overflow: hidden;
+    max-width: 475px;
 }
 
 .appetizer_container,
@@ -108,20 +115,23 @@ body {
 .pizza_container,
 .calzone_container {
     display              : none;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    background-color     : $bg_color;
+    grid-auto-flow: row;
+    background-color     : $B_color;
     position             : relative;
+    max-width: 525px;
+    place-items: center;
+    font-size: 1.2rem;
 }
 
 .food {
-    border-bottom: white 1px dashed;
+    border-bottom: $C_color 1px dashed;
     padding      : 25px;
 }
 
 .appetizer,
 .pasta {
     h2 {
-        width: 63px;
+        width: 73px;
     }
 }
 
@@ -134,8 +144,8 @@ h3 {
 #appetizer:checked {
 
     ~.menu_selector>label:nth-child(1) {
-        background-color: $bg_color;
-        color           : white;
+        background-color: $B_color;
+        color           : $fontA;
     }
 
     ~.appetizer_container {
@@ -146,8 +156,8 @@ h3 {
 #pasta:checked {
 
     ~.menu_selector>label:nth-child(2) {
-        background-color: $bg_color;
-        color           : white;
+        background-color: $B_color;
+        color           : $fontA;
     }
 
     ~.pasta_container {
@@ -158,8 +168,8 @@ h3 {
 #pizza:checked {
 
     ~.menu_selector>label:nth-child(3) {
-        background-color: $bg_color;
-        color           : white;
+        background-color: $B_color;
+        color           : $fontA;
     }
 
     ~.pizza_container {
@@ -170,8 +180,8 @@ h3 {
 #calzone:checked {
 
     ~.menu_selector>label:nth-child(4) {
-        background-color: $bg_color;
-        color           : white;
+        background-color: $B_color;
+        color           : $fontA;
     }
 
     ~.calzone_container {
@@ -180,3 +190,52 @@ h3 {
 }
 
 @include scroll_up(10px, 10px);
+
+@media only screen and (min-width: 765px) {
+.appetizer_container,
+.pasta_container,
+.pizza_container,
+.calzone_container {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    max-width: 100%;
+}
+
+    .pizza_container,
+    .calzone_container {
+        .price_container {
+            grid-column: span 2;
+        }
+    }
+
+.menu_selector {
+    max-width: 100%;
+}
+
+.menu_container {
+    padding: 25px;
+}
+}
+
+@media only screen and (min-width: 1100px) {
+    .pizza_container,
+    .calzone_container {
+        .price_container {
+            grid-column: span 3;
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1255px) {
+    .appetizer_container,
+    .pasta_container,
+    .pizza_container,
+    .calzone_container {
+        max-width: 1200px;
+    }
+
+    
+    .menu_selector {
+        max-width: 1200px;
+    }
+    }

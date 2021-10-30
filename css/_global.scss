@@ -14,18 +14,19 @@ img {
 
 body {
     overflow-x: hidden;
+    background-color: $A_color;
 }
 
 
 // image_hover color selector
 
-$ihc_border: white;
+$ihc_border: $fontA;
 // border color
-$ihc_text  : white;
+$ihc_text  : $fontA;
 // text color
-$ihc_textbg: black;
+$ihc_textbg: $fontB;
 // text background color
-$ihc_mask  : rgba(255, 86, 8, 0.7);
+$ihc_mask  : $D_color;
 
 // Image mask layout
 // 
@@ -82,15 +83,16 @@ $ihc_mask  : rgba(255, 86, 8, 0.7);
         // padding    : 5px;
         align-self    : end;
         opacity       : 1;
+        // text-align: right;
         transition    : all 0.2s ease-in-out;
-        text-shadow   : 0px 0px 0px white;
+        text-shadow   : 0px 0px 0px $fontA;
         justify-self  : end;
-        right         : calc(50% - 31.5px);
+        right         : calc(50% - 36.5px);
     }
 
     .shell p {
         font-style : italic;
-        font-size  : .7rem;
+        font-size  : .6em;
         position   : relative;
         color      : $ihc_text;
         opacity    : 1;
@@ -103,17 +105,15 @@ $ihc_mask  : rgba(255, 86, 8, 0.7);
         position   : relative;
         display    : inline-block;
         width      : 100%;
-        padding    : 5px;
-        font-size  : .8rem;
+        padding    : 5px 0px;
+        font-size  : .6em;
         background : $ihc_textbg;
         color      : $ihc_text;
         opacity    : .75;
         align-self : start;
         transition : all 0.2s ease-out;
-        text-shadow: 0px 0px 0px white;
+        text-shadow: 0px 0px 0px $fontA;
         font-weight: 700;
-        left      : 10px;
-        transform: translateX(-10px);
     }
 
     .shell:hover img {
@@ -121,17 +121,16 @@ $ihc_mask  : rgba(255, 86, 8, 0.7);
     }
 
     .shell:hover .mask {
-        background-color: rgba(255, 0, 0, 0);
+        background-color: $transparent;
     }
 
     .shell:hover h2 {
         // justify-self: end;
         color      : black;
         font-size  : 1.1em;
-        text-shadow: 1px 1px 3px white;
-        opacity    : 1;
+        text-shadow: 1px 1px 3px $fontA;
         text-align : right;
-        right      : 0px;
+        right      : 2px;
     }
 
     .shell:hover p {
@@ -140,14 +139,13 @@ $ihc_mask  : rgba(255, 86, 8, 0.7);
     }
 
     .shell:hover h3 {
-        text-shadow        : 1px 1px 2px white;
-        color              : black;
-        background         : rgba(0, 0, 0, 0);
+        text-shadow        : 1px 1px 2px $fontA;
+        color              : $fontB;
+        background         : $transparent;
         // transition-delay: 0.2s;
         font-weight        : 900;
         justify-self       : start;
-        text-align         : left;
-        left               : 5px;
+        // text-align         : left;
     }
 
 }

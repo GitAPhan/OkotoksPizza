@@ -14,6 +14,7 @@ img {
 
 body {
   overflow-x: hidden;
+  background-color: #D8ba92;
 }
 
 @-webkit-keyframes photo_transition {
@@ -379,6 +380,18 @@ body {
   padding-bottom: 5vh;
 }
 
+.phone {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  color: white;
+  text-decoration: none;
+}
+
+.phone img {
+  height: 25px;
+}
+
 .bg_images > img {
   position: absolute;
   top: 0px;
@@ -388,6 +401,8 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   z-index: 0;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .bg_images :nth-child(1) {
@@ -438,6 +453,9 @@ nav > a:hover {
 #maps {
   pointer-events: none;
   opacity: 0%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
 }
 
 #close {
@@ -479,9 +497,6 @@ nav > a:hover {
 
 #maps:target {
   position: absolute;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.575);
@@ -506,7 +521,8 @@ iframe {
   height: 40vh;
 }
 
-p, a {
+p,
+a {
   text-shadow: 1px 1px 2px black;
 }
 /*# sourceMappingURL=style.css.map */

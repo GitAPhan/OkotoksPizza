@@ -1,7 +1,7 @@
-@import 'global';
 @import 'color';
+@import 'global';
 
-body{
+body {
     position: relative;
     overflow: hidden;
 }
@@ -19,7 +19,7 @@ body{
     >div {
         place-self : center;
         text-align : center;
-        color      : white;
+        color      : $fontA;
         display    : grid;
         place-items: center;
         row-gap    : 10px;
@@ -32,7 +32,7 @@ body{
 
     .address {
         text-decoration: none;
-        color          : $font_prim;
+        color          : $fontA;
     }
 }
 
@@ -40,6 +40,16 @@ body{
     position      : relative;
     width         : 170px;
     padding-bottom: 5vh;
+}
+.phone {
+    display: grid;
+    grid-auto-flow: column;
+    color: white;
+    text-decoration: none;
+
+    img {
+        height: 25px;
+    }
 }
 
 .bg_images {
@@ -51,6 +61,7 @@ body{
         width     : 100%;
         object-fit: cover;
         z-index   : 0;
+        transition: all .2s ease-in-out;
     }
 
     :nth-child(1) {
@@ -79,15 +90,15 @@ nav {
 
     >a {
         text-decoration: none;
-        color          : $font_prim;
-        border         : white 2px solid;
+        color          : $fontA;
+        border         : $fontA 2px solid;
         padding        : 15px 25px;
         font-size      : .8em;
         font-weight    : 200;
 
         &:hover {
             background-color: rgba(0, 0, 0, 0.705);
-            box-shadow      : 2px 2px 5px black;
+            box-shadow      : 2px 2px 5px $fontB;
         }
     }
 }
@@ -95,7 +106,9 @@ nav {
 #maps {
     // display: none;
     pointer-events: none;
-    opacity: 0%;
+    opacity       : 0%;
+    display       : grid;
+    place-items   : center;
 }
 
 #close {
@@ -110,11 +123,11 @@ nav {
     justify-content : center;
     background-color: black;
     border-radius   : 50%;
-    color           : $font_prim;
+    color           : $fontA;
     cursor          : pointer;
     text-decoration : none;
     transition      : opacity .4s ease-in-out 1s;
-    opacity: 0;
+    opacity         : 0;
 
 }
 
@@ -132,16 +145,14 @@ nav {
 
 #maps:target {
     position        : absolute;
-    display         : grid;
-    place-items     : center;
     height          : 100%;
     width           : 100%;
-    background-color: rgba(0, 0, 0, 0.575);
+    background-color: $bg_colorB;
     top             : 0px;
     z-index         : 3;
     row-gap         : 20px;
     opacity         : 100%;
-    pointer-events: auto;
+    pointer-events  : auto;
 
     .map_container {
         animation: open 1s ease-in-out;
@@ -149,7 +160,7 @@ nav {
         width    : 80%;
         height   : 40%;
         z-index  : 2;
-        
+
     }
 }
 
@@ -158,6 +169,7 @@ iframe {
     height: 40vh;
 }
 
-p,a {
-    text-shadow: 1px 1px 2px black;
+p,
+a {
+    text-shadow: 1px 1px 2px $fontB;
 }

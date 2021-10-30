@@ -11,27 +11,45 @@
 
 <body>
     <header id="header">
-        <div id="spacer"></div>
-        <a id="logo-container" href="../index.html"><img class="logo" src="../images/opplogo.png"
-                alt="Okotoks Pizza Logo"></a>
-        <div id="nav">
-            <img id="menu-icon" src="../images/menu.png" alt="menu select icon">
-            <input class="toggle" type="checkbox">
+
+        <a href="../index.html"><img class="logo" src="../images/opplogo.png" alt="Okotoks Pizza logo"></a>
+
+        <div id="header_menu_container">
+            <a id="menu_close" href="#">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </a>
             <nav class="nav">
                 <a href="#">Menu</a>
-                <a href="../pages/AboutUs.html">About Us</a>
+                <a href="AboutUs.html">About Us</a>
                 <a href="https://restaurantguru.com/Savona-Pizzeria-Calgary/reviews?bylang=1">Reviews</a>
-                <a href="AboutUs.html#contact">Contact Us</a>
-                <a href="AboutUs.html#maps">Location</a>
             </nav>
+
+            <div id="menu_info">
+                <p>OPEN EVERYDAY</p>
+                <p>12pm - 10:30pm </p>
+                <a target="_blank" href="https://google.com/maps/?q=Savona's+Pizza,+Calgary,+AB+T2E+2S2">1601c Centre St
+                    NW</a>
+                <a href="tel: 4035555555">403.555.5555</a>
+            </div>
         </div>
 
+        <a id="menu_icon" href="#header_menu_container">
+            <div></div>
+            <div></div>
+            <div></div>
+        </a>
     </header>
 
     <a id="up" href="#header"><img src="../images/up-arrow-circle.png" alt="up arrow icon"></a>
 
-    <h1 id="title">No cats were harmed in the making of this website!</h1>
-
+    
+    <div class="promotional_banner">
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="beautiful pizza on a wooden cutting board">
+        <h1 class="promo">Take advantage of our 50% off after 9:30PM</h1>
+    </div>
 
     <div class="menu_container">
 
@@ -67,7 +85,7 @@
                     <img src="https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/zeaxdpym/35737703-6732-4d8f-ae84-3ade31971365.jpg
         " alt="toasted cheesy garlic bread with a small bowl containing marinara sauce">
                     <div class="mask">
-                        <h3>CHEESY GARLIC BREAD & HOUSEMADE MARINARA</h3>
+                        <h3>CHEESY BREAD & HOUSEMADE MARINARA</h3>
                         <p class="ingredients">olive oil, fresh garlic, butter, parmesan, mozzarella</p>
                         <h2>7.25</h2>
                     </div>
@@ -96,9 +114,8 @@
                         <h3>ANTIPASTO</h3>
                         <p class="ingredients">romaine & spring mix, capicola, calabrese salami, mozzarella Fresca,
                             roasted red
-                            pepper, grilled roman artichoke, pickled red onion, cherry tomato, country olives, Italian
-                            dressing,
-                            warm baguette & butter</p>
+                            pepper, grilled roman artichoke, red onion, cherry tomato, country olives, Italian
+                            dressing & butter</p>
                         <h2>14.95</h2>
                     </div>
                 </div>
@@ -111,7 +128,7 @@
                     <div class="mask">
                         <h3>STRAWBERRY GORGONZOLA</h3>
                         <p class="ingredients">baby spinach, housemade candied pecans, strawberry, red onion,
-                            gorgonzola, pomegranate vinaigrette</p>
+                            gorgonzola, pomegranate vinaigrette</p>
                         <h2>12.95</h2>
                     </div>
                 </div>
@@ -230,13 +247,13 @@
                         <p class="ingredients">mushrooms, red onions, black olives, mixed green & red sweet bell
                             peppers,
                             mozzarella</p>
-                            <div class="small_price_container">
-                                <h2>P 9.85</h2>
-                                <h2>S 15.50</h2>
-                                <h2>M 20.95</h2>
-                                <h2>L 25.95</h2>
-                                <h2>GF 15.50</h2>
-                            </div>
+                        <div class="small_price_container">
+                            <h2>P 9.85</h2>
+                            <h2>S 15.50</h2>
+                            <h2>M 20.95</h2>
+                            <h2>L 25.95</h2>
+                            <h2>GF 15.50</h2>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -249,13 +266,13 @@
                         <h3>L'ITALIANA</h3>
                         <p class="ingredients">fresh spinach, our secret spice blend, roasted red peppers, feta,
                             mozzarella</p>
-                            <div class="small_price_container">
-                                <h2>P 9.85</h2>
-                                <h2>S 15.50</h2>
-                                <h2>M 20.95</h2>
-                                <h2>L 25.95</h2>
-                                <h2>GF 15.50</h2>
-                            </div>
+                        <div class="small_price_container">
+                            <h2>P 9.85</h2>
+                            <h2>S 15.50</h2>
+                            <h2>M 20.95</h2>
+                            <h2>L 25.95</h2>
+                            <h2>GF 15.50</h2>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -286,13 +303,13 @@
                         <h3>SUPER SIX</h3>
                         <p class="ingredients">Italian sausage, pepperoni, ham, mushrooms, mixed green & red sweet
                             bell peppers, mozzarella</p>
-                            <div class="small_price_container">
-                                <h2>P 9.85</h2>
-                                <h2>S 15.50</h2>
-                                <h2>M 20.95</h2>
-                                <h2>L 25.95</h2>
-                                <h2>GF 15.50</h2>
-                            </div>
+                        <div class="small_price_container">
+                            <h2>P 9.85</h2>
+                            <h2>S 15.50</h2>
+                            <h2>M 20.95</h2>
+                            <h2>L 25.95</h2>
+                            <h2>GF 15.50</h2>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -305,13 +322,13 @@
                         <h3>CHICKEN PRESTO PESTO</h3>
                         <p class="ingredients">chicken, artichoke hearts, red onions, sun-dried tomatoes, mozzarella,
                             basil pesto sauce</p>
-                            <div class="small_price_container">
-                                <h2>P 9.85</h2>
-                                <h2>S 15.50</h2>
-                                <h2>M 20.95</h2>
-                                <h2>L 25.95</h2>
-                                <h2>GF 15.50</h2>
-                            </div>
+                        <div class="small_price_container">
+                            <h2>P 9.85</h2>
+                            <h2>S 15.50</h2>
+                            <h2>M 20.95</h2>
+                            <h2>L 25.95</h2>
+                            <h2>GF 15.50</h2>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -325,13 +342,13 @@
                         <p class="ingredients">fresh spinach, our secret spice blend, tomatoes, red onions, Kalamata
                             olives,
                             sliced pepperoncini, feta, mozzarella, choice of pizza sauce or extra virgin olive oil</p>
-                            <div class="small_price_container">
-                                <h2>P 9.85</h2>
-                                <h2>S 15.50</h2>
-                                <h2>M 20.95</h2>
-                                <h2>L 25.95</h2>
-                                <h2>GF 15.50</h2>
-                            </div>
+                        <div class="small_price_container">
+                            <h2>P 9.85</h2>
+                            <h2>S 15.50</h2>
+                            <h2>M 20.95</h2>
+                            <h2>L 25.95</h2>
+                            <h2>GF 15.50</h2>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -344,13 +361,13 @@
                         <h3>GET MEATY</h3>
                         <p class="ingredients">Italian sausage, Italian beef, pepperoni, smoked
                             Canadian bacon, mozzarella</p>
-                            <div class="small_price_container">
-                                <h2>P 9.85</h2>
-                                <h2>S 15.50</h2>
-                                <h2>M 20.95</h2>
-                                <h2>L 25.95</h2>
-                                <h2>GF 15.50</h2>
-                            </div>
+                        <div class="small_price_container">
+                            <h2>P 9.85</h2>
+                            <h2>S 15.50</h2>
+                            <h2>M 20.95</h2>
+                            <h2>L 25.95</h2>
+                            <h2>GF 15.50</h2>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -363,13 +380,13 @@
                         <h3>THE CHICAGO</h3>
                         <p class="ingredients">Italian sausage, red onions, mixed green & red sweet
                             bell peppers, mozzarella</p>
-                            <div class="small_price_container">
-                                <h2>P 9.85</h2>
-                                <h2>S 15.50</h2>
-                                <h2>M 20.95</h2>
-                                <h2>L 25.95</h2>
-                                <h2>GF 15.50</h2>
-                            </div>
+                        <div class="small_price_container">
+                            <h2>P 9.85</h2>
+                            <h2>S 15.50</h2>
+                            <h2>M 20.95</h2>
+                            <h2>L 25.95</h2>
+                            <h2>GF 15.50</h2>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -382,13 +399,13 @@
                         <h3>MARGHERITA</h3>
                         <p class="ingredients">tomatoes, fresh basil, extra virgin olive oil,
                             mozzarella, Pecorino Romano</p>
-                            <div class="small_price_container">
-                                <h2>P 9.85</h2>
-                                <h2>S 15.50</h2>
-                                <h2>M 20.95</h2>
-                                <h2>L 25.95</h2>
-                                <h2>GF 15.50</h2>
-                            </div>
+                        <div class="small_price_container">
+                            <h2>P 9.85</h2>
+                            <h2>S 15.50</h2>
+                            <h2>M 20.95</h2>
+                            <h2>L 25.95</h2>
+                            <h2>GF 15.50</h2>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -426,12 +443,12 @@
                         <p class="ingredients">Italian beef, au jus, red onion, mozzarella, choice of hot giardiniera,
                             mixed
                             sweet bell pepper or jalapeño</p>
-                            <div class="small_price_container">
-                                <h2>P 7.25</h2>
-                                <h2>S 11.50</h2>
-                                <h2>M 15.50</h2>
-                                <h2 class='no_border'>L 19.75</h2>
-                            </div>
+                        <div class="small_price_container">
+                            <h2>P 7.25</h2>
+                            <h2>S 11.50</h2>
+                            <h2>M 15.50</h2>
+                            <h2 class='no_border'>L 19.75</h2>
+                        </div>
                     </div>
                 </div>
             </div>
