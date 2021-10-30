@@ -14,7 +14,7 @@ img {
 
 body {
   overflow-x: hidden;
-  background-color: #f2D6AD;
+  background-color: white;
 }
 
 @-webkit-keyframes photo_transition {
@@ -249,10 +249,16 @@ body {
   0% {
     opacity: 1;
   }
+  30% {
+    opacity: 1;
+  }
   33% {
     opacity: 0;
   }
   66% {
+    opacity: 0;
+  }
+  90% {
     opacity: 0;
   }
   100% {
@@ -264,10 +270,16 @@ body {
   0% {
     opacity: 1;
   }
+  30% {
+    opacity: 1;
+  }
   33% {
     opacity: 0;
   }
   66% {
+    opacity: 0;
+  }
+  90% {
     opacity: 0;
   }
   100% {
@@ -279,7 +291,13 @@ body {
   0% {
     opacity: 0;
   }
+  23% {
+    opacity: 0;
+  }
   33% {
+    opacity: 1;
+  }
+  63% {
     opacity: 1;
   }
   66% {
@@ -294,7 +312,13 @@ body {
   0% {
     opacity: 0;
   }
+  23% {
+    opacity: 0;
+  }
   33% {
+    opacity: 1;
+  }
+  63% {
     opacity: 1;
   }
   66% {
@@ -312,7 +336,13 @@ body {
   33% {
     opacity: 0;
   }
+  56% {
+    opacity: 0;
+  }
   66% {
+    opacity: 1;
+  }
+  96% {
     opacity: 1;
   }
   100% {
@@ -327,7 +357,13 @@ body {
   33% {
     opacity: 0;
   }
+  56% {
+    opacity: 0;
+  }
   66% {
+    opacity: 1;
+  }
+  96% {
     opacity: 1;
   }
   100% {
@@ -339,14 +375,23 @@ body {
   height: 60px;
   -webkit-filter: drop-shadow(2px 2px 4px black);
           filter: drop-shadow(2px 2px 4px black);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+
+.logo:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 #header {
-  padding: 3px;
+  padding: 4px;
   display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
-  background-color: #D8ba92;
+  background-color: #f2D6AD;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -450,6 +495,12 @@ body {
           transform: rotate(35deg) translateX(-65px);
   -ms-grid-column-align: start;
       justify-self: start;
+}
+
+@media only screen and (min-width: 1000px) {
+  #map_link + a {
+    pointer-events: none;
+  }
 }
 
 #menu_icon {

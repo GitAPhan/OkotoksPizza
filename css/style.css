@@ -14,7 +14,7 @@ img {
 
 body {
   overflow-x: hidden;
-  background-color: #f2D6AD;
+  background-color: white;
 }
 
 @-webkit-keyframes photo_transition {
@@ -249,10 +249,16 @@ body {
   0% {
     opacity: 1;
   }
+  30% {
+    opacity: 1;
+  }
   33% {
     opacity: 0;
   }
   66% {
+    opacity: 0;
+  }
+  90% {
     opacity: 0;
   }
   100% {
@@ -264,10 +270,16 @@ body {
   0% {
     opacity: 1;
   }
+  30% {
+    opacity: 1;
+  }
   33% {
     opacity: 0;
   }
   66% {
+    opacity: 0;
+  }
+  90% {
     opacity: 0;
   }
   100% {
@@ -279,7 +291,13 @@ body {
   0% {
     opacity: 0;
   }
+  23% {
+    opacity: 0;
+  }
   33% {
+    opacity: 1;
+  }
+  63% {
     opacity: 1;
   }
   66% {
@@ -294,7 +312,13 @@ body {
   0% {
     opacity: 0;
   }
+  23% {
+    opacity: 0;
+  }
   33% {
+    opacity: 1;
+  }
+  63% {
     opacity: 1;
   }
   66% {
@@ -312,7 +336,13 @@ body {
   33% {
     opacity: 0;
   }
+  56% {
+    opacity: 0;
+  }
   66% {
+    opacity: 1;
+  }
+  96% {
     opacity: 1;
   }
   100% {
@@ -327,7 +357,13 @@ body {
   33% {
     opacity: 0;
   }
+  56% {
+    opacity: 0;
+  }
   66% {
+    opacity: 1;
+  }
+  96% {
     opacity: 1;
   }
   100% {
@@ -338,6 +374,7 @@ body {
 body {
   position: relative;
   overflow: hidden;
+  top: 0px;
 }
 
 .body {
@@ -348,7 +385,7 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
-  min-height: 100vh;
+  height: 100vh;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.411);
   overflow: hidden;
@@ -388,8 +425,16 @@ body {
   text-decoration: none;
 }
 
+.phone > p:nth-child(3) {
+  display: none;
+}
+
 .phone img {
   height: 25px;
+}
+
+.bg_images {
+  height: 100%;
 }
 
 .bg_images > img {
@@ -531,5 +576,27 @@ iframe {
 p,
 a {
   text-shadow: 1px 1px 2px black;
+}
+
+footer {
+  position: absolute;
+  top: 96vh;
+  left: 0px;
+  width: 100%;
+  position: grid;
+  place-items: center;
+  z-index: 10;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 1000px) {
+  .phone {
+    pointer-events: none;
+  }
+  .phone img {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */

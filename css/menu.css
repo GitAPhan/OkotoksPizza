@@ -14,7 +14,7 @@ img {
 
 body {
   overflow-x: hidden;
-  background-color: #f2D6AD;
+  background-color: white;
 }
 
 @-webkit-keyframes photo_transition {
@@ -249,10 +249,16 @@ body {
   0% {
     opacity: 1;
   }
+  30% {
+    opacity: 1;
+  }
   33% {
     opacity: 0;
   }
   66% {
+    opacity: 0;
+  }
+  90% {
     opacity: 0;
   }
   100% {
@@ -264,10 +270,16 @@ body {
   0% {
     opacity: 1;
   }
+  30% {
+    opacity: 1;
+  }
   33% {
     opacity: 0;
   }
   66% {
+    opacity: 0;
+  }
+  90% {
     opacity: 0;
   }
   100% {
@@ -279,7 +291,13 @@ body {
   0% {
     opacity: 0;
   }
+  23% {
+    opacity: 0;
+  }
   33% {
+    opacity: 1;
+  }
+  63% {
     opacity: 1;
   }
   66% {
@@ -294,7 +312,13 @@ body {
   0% {
     opacity: 0;
   }
+  23% {
+    opacity: 0;
+  }
   33% {
+    opacity: 1;
+  }
+  63% {
     opacity: 1;
   }
   66% {
@@ -312,7 +336,13 @@ body {
   33% {
     opacity: 0;
   }
+  56% {
+    opacity: 0;
+  }
   66% {
+    opacity: 1;
+  }
+  96% {
     opacity: 1;
   }
   100% {
@@ -327,7 +357,13 @@ body {
   33% {
     opacity: 0;
   }
+  56% {
+    opacity: 0;
+  }
   66% {
+    opacity: 1;
+  }
+  96% {
     opacity: 1;
   }
   100% {
@@ -339,14 +375,23 @@ body {
   height: 60px;
   -webkit-filter: drop-shadow(2px 2px 4px black);
           filter: drop-shadow(2px 2px 4px black);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+
+.logo:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 #header {
-  padding: 3px;
+  padding: 4px;
   display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
-  background-color: #D8ba92;
+  background-color: #f2D6AD;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -450,6 +495,12 @@ body {
           transform: rotate(35deg) translateX(-65px);
   -ms-grid-column-align: start;
       justify-self: start;
+}
+
+@media only screen and (min-width: 1000px) {
+  #map_link + a {
+    pointer-events: none;
+  }
 }
 
 #menu_icon {
@@ -783,13 +834,22 @@ body {
 
 .menu_selector > label {
   padding: 10px 0px;
-  background-color: #444545;
+  background-color: white;
   width: 100%;
   text-align: center;
-  -webkit-transition: all .4s ease-in;
-  transition: all .4s ease-in;
+  -webkit-transition: .4s ease-in;
+  transition: .4s ease-in;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
   font-weight: 600;
   font-size: 14px;
+  cursor: pointer;
+}
+
+.menu_selector label:hover {
+  outline: 1px rgba(128, 128, 128, 0.109) solid;
+  outline-offset: -1px;
+  background-color: rgba(128, 128, 128, 0.017);
 }
 
 .pizza_container > .pizza .mask h2,
@@ -875,7 +935,7 @@ body {
   top: 0;
   left: 0;
   opacity: 1;
-  background-color: #d10c0ca8;
+  background-color: #e08686a1;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
@@ -918,6 +978,7 @@ body {
   transition: all 0.2s linear;
   padding: 0px 5px;
   font-weight: 600;
+  text-shadow: .5px .5px 1px black;
 }
 
 .food .shell h3 {
@@ -928,7 +989,7 @@ body {
   font-size: .6em;
   background: black;
   color: white;
-  opacity: .75;
+  opacity: 1;
   -ms-flex-item-align: start;
       -ms-grid-row-align: start;
       align-self: start;
@@ -947,14 +1008,10 @@ body {
   background-color: rgba(0, 0, 0, 0);
 }
 
-.food .shell:hover {
-  border: 0.5px solid black;
-}
-
 .food .shell:hover h2 {
   color: black;
   font-size: 1.1em;
-  text-shadow: 1px 1px 3px white;
+  text-shadow: 1px 1px 2px white;
   text-align: right;
   right: 2px;
 }
@@ -966,8 +1023,8 @@ body {
 }
 
 .food .shell:hover h3 {
-  text-shadow: 1px 1px 3px white;
-  color: black;
+  text-shadow: 2px 2px 3px black;
+  color: white;
   background: rgba(0, 0, 0, 0);
   font-weight: 900;
   font-size: .7em;
@@ -979,11 +1036,13 @@ body {
 .calzone_container {
   display: none;
   grid-auto-flow: row;
-  background-color: #D8ba92;
+  background-color: white;
   position: relative;
   max-width: 525px;
   place-items: center;
   font-size: 1.2rem;
+  outline: 2px #D8ba92 solid;
+  outline-offset: -2px;
 }
 
 .food {
