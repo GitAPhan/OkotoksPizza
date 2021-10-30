@@ -14,7 +14,7 @@ img {
 
 body {
   overflow-x: hidden;
-  background-color: #D8ba92;
+  background-color: #f2D6AD;
 }
 
 @-webkit-keyframes photo_transition {
@@ -346,7 +346,7 @@ body {
   display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
-  background-color: #f2D6AD;
+  background-color: #D8ba92;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -510,29 +510,108 @@ body {
 #header_menu_container:target #menu_close > div:nth-child(1) {
   -webkit-transform: rotate(35deg) translateX(5px);
           transform: rotate(35deg) translateX(5px);
-  -webkit-transition-delay: .3s;
-          transition-delay: .3s;
+  -webkit-transition-delay: .9s;
+          transition-delay: .9s;
 }
 
 #header_menu_container:target #menu_close > div:nth-child(2) {
   -webkit-transform: rotate(-35deg) translateX(-5px);
           transform: rotate(-35deg) translateX(-5px);
-  -webkit-transition-delay: .3s;
-          transition-delay: .3s;
+  -webkit-transition-delay: .9s;
+          transition-delay: .9s;
 }
 
 #header_menu_container:target #menu_close > div:nth-child(3) {
   -webkit-transform: rotate(-35deg) translateX(5px);
           transform: rotate(-35deg) translateX(5px);
-  -webkit-transition-delay: .3s;
-          transition-delay: .3s;
+  -webkit-transition-delay: .9s;
+          transition-delay: .9s;
 }
 
 #header_menu_container:target #menu_close > div:nth-child(4) {
   -webkit-transform: rotate(35deg) translateX(-5px);
           transform: rotate(35deg) translateX(-5px);
-  -webkit-transition-delay: .3s;
-          transition-delay: .3s;
+  -webkit-transition-delay: .9s;
+          transition-delay: .9s;
+}
+
+#map_link {
+  display: none;
+}
+
+#map {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+#close {
+  right: calc(10vw - .75rem);
+  top: calc(30vh - .75rem);
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  display: -ms-grid;
+  display: grid;
+  z-index: 4;
+  place-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: black;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-transition: opacity .4s ease-in-out 1s;
+  transition: opacity .4s ease-in-out 1s;
+  opacity: 0;
+}
+
+#close p {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  padding: 0px 0px 2px 2px;
+}
+
+#bg_close {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+#map:target > #close {
+  opacity: 1;
+}
+
+#map:target {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.575);
+  top: 0px;
+  z-index: 10;
+  row-gap: 20px;
+  opacity: 100%;
+  pointer-events: auto;
+}
+
+#map:target .map_container {
+  -webkit-animation: open 1s ease-in-out;
+          animation: open 1s ease-in-out;
+  overflow: hidden;
+  width: 80%;
+  height: 40%;
+  z-index: 2;
+}
+
+iframe {
+  width: 80vw;
+  height: 40vh;
 }
 
 #menu_icon:hover > div:nth-child(1) {
@@ -605,6 +684,34 @@ body {
           transform: scale(1.3);
 }
 
+@media only screen and (min-width: 600px) {
+  #map_glink {
+    display: none;
+  }
+  #map_link {
+    display: inline;
+  }
+}
+
+footer {
+  position: relative;
+  height: 100px;
+  background-image: url(https://popmenucloud.com/cdn-cgi/image/width=1440,height=1440,fit=scale-down,format=auto,quality=60/zeaxdpym/792357da-ae30-4538-ad69-beac139ceca8.png);
+  background-size: cover;
+  background-position: center;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+footer p {
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 3px black;
+  width: 80%;
+  font-size: 14px;
+}
+
 main {
   display: -ms-grid;
   display: grid;
@@ -637,7 +744,7 @@ main > img:nth-child(1) {
 }
 
 h3 {
-  color: #444545c2;
+  color: #d10d0c;
   font-weight: bolder;
 }
 
@@ -662,6 +769,7 @@ article > div:not(.youtube) {
   display: -ms-grid;
   display: grid;
   row-gap: 15px;
+  padding: 10px;
 }
 
 .bg_image_container {
@@ -695,28 +803,37 @@ article > div:not(.youtube) {
   background-position: center;
 }
 
-.staff > .bg_image_container {
-  background-image: url(https://popmenucloud.com/cdn-cgi/image/width=1440,height=1440,fit=scale-down,format=auto,quality=60/zeaxdpym/792357da-ae30-4538-ad69-beac139ceca8.png);
-  background-size: cover;
-  background-position: center;
-}
-
 .staff {
   display: -ms-grid;
   display: grid;
   place-items: center;
   padding-top: 20px;
-  background-color: #06d6A0;
+  background-color: #444545;
 }
 
 .staff .message_left,
 .staff .message_right {
   background-color: #D8ba92;
-  padding: 25px;
+}
+
+.staff .article > div:nth-child(1),
+.staff .message_left {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.staff .message_left p {
+  padding: 25px 0px;
+  width: 80%;
 }
 
 .staff .article > div:nth-child(1) > p {
-  padding: 25px;
+  padding: 25px 0px;
+  width: 80%;
+  color: white;
 }
 
 .staff .message_left + .photo_carousel {
@@ -832,7 +949,10 @@ article > div:not(.youtube) {
 }
 
 @media only screen and (min-width: 600px) {
-  .article p {
+  .staff .article p {
+    padding: 5% 25%;
+  }
+  .staff .article > div:nth-child(1) > p {
     padding: 5% 25%;
   }
   article > img {
@@ -858,29 +978,37 @@ article > div:not(.youtube) {
     width: 90%;
     padding-bottom: 50.625%;
   }
-  .article {
+  .staff .article {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
   }
-  .article p {
-    padding: 35px;
+  .staff .article p {
+    padding: 65px;
+    width: 80%;
   }
-  .article .photo_carousel {
-    width: 90%;
+  .staff .article .article > div:nth-child(1) > p {
+    padding: 65px;
+    width: 80%;
   }
-  .message_left {
+  .staff .article .photo_carousel {
+    width: 100%;
+  }
+  .article .message_left {
     display: none;
   }
-  .message_right {
-    display: inline-block;
+  .staff .message_right {
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
   }
   .article > div:nth-child(1) > p {
     text-align: right;
   }
-  .bg_image_container:not(.article + .bg_image_container) {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
+  .message_left + .photo_carousel {
+    width: 100%;
   }
   main > div {
     position: relative;

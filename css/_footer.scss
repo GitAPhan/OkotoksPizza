@@ -1,0 +1,17 @@
+footer {
+    position: relative;
+    height: 100px;
+    background-image: url(https://popmenucloud.com/cdn-cgi/image/width=1440,height=1440,fit=scale-down,format=auto,quality=60/zeaxdpym/792357da-ae30-4538-ad69-beac139ceca8.png);
+    background-size: cover;
+    background-position:center;
+    display: grid;
+    place-items: center;
+
+    p {
+        text-align: center;
+        color: $fontA;
+        text-shadow: 1px 1px 3px $fontB;
+        width: 80%;
+        font-size: 14px;
+    }
+}

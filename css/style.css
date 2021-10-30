@@ -14,7 +14,7 @@ img {
 
 body {
   overflow-x: hidden;
-  background-color: #D8ba92;
+  background-color: #f2D6AD;
 }
 
 @-webkit-keyframes photo_transition {
@@ -482,6 +482,13 @@ nav > a:hover {
   -webkit-transition: opacity .4s ease-in-out 1s;
   transition: opacity .4s ease-in-out 1s;
   opacity: 0;
+}
+
+#close p {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  padding: 0px 0px 2px 2px;
 }
 
 #bg_close {

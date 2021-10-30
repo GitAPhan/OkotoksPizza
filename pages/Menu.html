@@ -30,8 +30,9 @@
             <div id="menu_info">
                 <p>OPEN EVERYDAY</p>
                 <p>12pm - 10:30pm </p>
-                <a target="_blank" href="https://google.com/maps/?q=Savona's+Pizza,+Calgary,+AB+T2E+2S2">1601c Centre St
+                <a id="map_glink" target="_blank" href="https://google.com/maps/?q=Savona's+Pizza,+Calgary,+AB+T2E+2S2">1601c Centre St
                     NW</a>
+                    <a id="map_link" href="#map">1601c Centre St NW</a>
                 <a href="tel: 4035555555">403.555.5555</a>
             </div>
         </div>
@@ -41,14 +42,26 @@
             <div></div>
             <div></div>
         </a>
+
+        <article id="map">
+            <a id="close" href="#"><p>x</p></a>        
+            <div class="map_container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2507.2951197367242!2d-114.06497604939513!3d51.066101979464705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5371651d74b117ad%3A0x57cb1e8bec746d21!2sSavona%E2%80%99s%20Pizza!5e0!3m2!1sen!2sca!4v1635006715361!5m2!1sen!2sca"
+                style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+            
+        </div>
+        <a id="bg_close" href="#"></a>
+        </article>
     </header>
 
-    <a id="up" href="#header"><img src="../images/up-arrow-circle.png" alt="up arrow icon"></a>
+    <a id="up" href="#"><img src="../images/up-arrow-circle.png" alt="up arrow icon"></a>
 
     
     <div class="promotional_banner">
         <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="beautiful pizza on a wooden cutting board">
-        <h1 class="promo">Take advantage of our 50% off after 9:30PM</h1>
+        <h1 class="promo">Take advantage of our 50% off all pizzas after 9:30PM</h1>
     </div>
 
     <div class="menu_container">
@@ -473,6 +486,10 @@
 
 
     </div>
+
+    <footer>
+        <p>© 2021 Okotoks Pizza. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>

@@ -4,17 +4,17 @@
 }
 
 #header {
-    padding            : 3px;
-    display            : grid;
-    grid-auto-flow     : column;
-    background-color   : $bg_color;
+    padding               : 3px;
+    display               : grid;
+    grid-auto-flow        : column;
+    background-color      : $A_color;
     // background-image: url(https://png.pngtree.com/background/20210714/original/pngtree-red-gradient-matte-background-picture-image_1216345.jpg);
     // box-shadow         : 5px 5px 15px $C_color;
-    align-items        : center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 4;
+    align-items           : center;
+    position              : fixed;
+    top                   : 0;
+    width                 : 100%;
+    z-index               : 4;
 }
 
 #header_menu_container {
@@ -148,26 +148,100 @@
 
         >div:nth-child(1) {
             transform       : rotate(35deg) translateX(5px);
-            transition-delay: .3s;
+            transition-delay: .9s;
         }
 
         >div:nth-child(2) {
             transform       : rotate(-35deg) translateX(-5px);
-            transition-delay: .3s;
+            transition-delay: .9s;
         }
 
         >div:nth-child(3) {
             transform       : rotate(-35deg) translateX(5px);
-            transition-delay: .3s;
+            transition-delay: .9s;
         }
 
         >div:nth-child(4) {
             transform       : rotate(35deg) translateX(-5px);
-            transition-delay: .3s;
+            transition-delay: .9s;
         }
 
 
     }
+}
+
+#map_link {
+    display: none;
+}
+
+#map {
+    position        : absolute;
+    pointer-events: none;
+    opacity       : 0%;
+    display       : grid;
+    place-items   : center;
+}
+
+#close {
+    right           : calc(10vw - .75rem);
+    top             : calc(30vh - .75rem);
+    width           : 1.5rem;
+    height          : 1.5rem;
+    position        : absolute;
+    display         : grid;
+    z-index         : 4;
+    place-items     : center;
+    justify-content : center;
+    background-color: black;
+    border-radius   : 50%;
+    color           : $fontA;
+    cursor          : pointer;
+    text-decoration : none;
+    transition      : opacity .4s ease-in-out 1s;
+    opacity         : 0;
+    
+    p {    text-align: center;
+        height: 100%;
+        width: 100%;
+        padding: 0px 0px 2px 2px ;
+}
+}
+
+#bg_close {
+    position: absolute;
+    width   : 100%;
+    height  : 100%;
+    z-index : 0;
+}
+
+#map:target>#close {
+    opacity: 1;
+}
+
+#map:target {
+    height          : 100vh;
+    width           : 100vw;
+    background-color: $bg_colorB;
+    top             : 0px;
+    z-index         : 10;
+    row-gap         : 20px;
+    opacity         : 100%;
+    pointer-events  : auto;
+
+    .map_container {
+        animation: open 1s ease-in-out;
+        overflow : hidden;
+        width    : 80%;
+        height   : 40%;
+        z-index  : 2;
+
+    }
+}
+
+
+iframe {
+    width : 80vw;
+    height: 40vh;
 }
 
 #menu_icon:hover {
@@ -289,8 +363,16 @@
 
 @media only screen and (min-width: 600px) {
 
+    #map_glink {
+            display: none;
+        }
 
 
+    
+
+    #map_link {
+        display: inline;
+    }
 
 
 

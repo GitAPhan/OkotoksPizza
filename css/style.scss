@@ -41,10 +41,11 @@ body {
     width         : 170px;
     padding-bottom: 5vh;
 }
+
 .phone {
-    display: grid;
-    grid-auto-flow: column;
-    color: white;
+    display        : grid;
+    grid-auto-flow : column;
+    color          : white;
     text-decoration: none;
 
     img {
@@ -129,6 +130,13 @@ nav {
     transition      : opacity .4s ease-in-out 1s;
     opacity         : 0;
 
+
+    p {
+        text-align: center;
+        height    : 100%;
+        width     : 100%;
+        padding   : 0px 0px 2px 2px;
+    }
 }
 
 
