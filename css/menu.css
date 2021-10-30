@@ -1002,7 +1002,7 @@ h3 {
 
 #appetizer:checked ~ .menu_selector > label:nth-child(1) {
   background-color: #D8ba92;
-  color: white;
+  color: #d10d0c;
 }
 
 #appetizer:checked ~ .appetizer_container {
@@ -1012,7 +1012,7 @@ h3 {
 
 #pasta:checked ~ .menu_selector > label:nth-child(2) {
   background-color: #D8ba92;
-  color: white;
+  color: #d10d0c;
 }
 
 #pasta:checked ~ .pasta_container {
@@ -1022,7 +1022,7 @@ h3 {
 
 #pizza:checked ~ .menu_selector > label:nth-child(3) {
   background-color: #D8ba92;
-  color: white;
+  color: #d10d0c;
 }
 
 #pizza:checked ~ .pizza_container {
@@ -1032,7 +1032,7 @@ h3 {
 
 #calzone:checked ~ .menu_selector > label:nth-child(4) {
   background-color: #D8ba92;
-  color: white;
+  color: #d10d0c;
 }
 
 #calzone:checked ~ .calzone_container {
@@ -1050,6 +1050,9 @@ h3 {
 }
 
 @media only screen and (min-width: 765px) {
+  .menu_selector > label {
+    font-size: 16px;
+  }
   .appetizer_container,
   .pasta_container,
   .pizza_container,
@@ -1079,6 +1082,9 @@ h3 {
   .pizza_container .price_container,
   .calzone_container .price_container {
     grid-column: span 3;
+  }
+  .menu_selector > label {
+    font-size: 18px;
   }
 }
 

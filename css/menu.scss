@@ -183,7 +183,7 @@ h3 {
 
     ~.menu_selector>label:nth-child(1) {
         background-color: $A_color;
-        color           : $fontA;
+        color           : $D_color;
     }
 
     ~.appetizer_container {
@@ -195,7 +195,7 @@ h3 {
 
     ~.menu_selector>label:nth-child(2) {
         background-color: $A_color;
-        color           : $fontA;
+        color           : $D_color;
     }
 
     ~.pasta_container {
@@ -207,7 +207,7 @@ h3 {
 
     ~.menu_selector>label:nth-child(3) {
         background-color: $A_color;
-        color           : $fontA;
+        color           : $D_color;
     }
 
     ~.pizza_container {
@@ -219,7 +219,7 @@ h3 {
 
     ~.menu_selector>label:nth-child(4) {
         background-color: $A_color;
-        color           : $fontA;
+        color           : $D_color;
     }
 
     ~.calzone_container {
@@ -230,6 +230,10 @@ h3 {
 @include scroll_up(10px, 10px);
 
 @media only screen and (min-width: 765px) {
+
+    .menu_selector>label {
+        font-size: 16px;
+    }
 
     .appetizer_container,
     .pasta_container,
@@ -270,6 +274,9 @@ h3 {
         .price_container {
             grid-column: span 3;
         }
+    }
+    .menu_selector>label {
+        font-size: 18px;
     }
 
 }
