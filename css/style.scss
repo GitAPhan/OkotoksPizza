@@ -34,6 +34,12 @@ body {
     .address {
         text-decoration: none;
         color          : $fontA;
+        display: grid;
+        grid-auto-flow: column;
+
+        img {
+            height: 24px;
+        }
     }
 }
 
@@ -208,6 +214,14 @@ footer {
 
         img {
             display: none;
+        }
+
+        >p:nth-child(1) {
+            display: none;
+        }
+
+        >p:nth-child(3) {
+            display: inline-block;
         }
     }
 }
