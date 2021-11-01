@@ -273,10 +273,19 @@ h3 {
         }
     }
 
-    .pizza_container,
+    .pizza_container {
+        .price_container {
+            grid-column: span 2;
+            padding: 0px 12.5%;
+            width: 74.5%;
+        }
+    }
+
     .calzone_container {
         .price_container {
             grid-column: span 2;
+            padding: 0px 22%;
+            width: 56%;
         }
     }
 
@@ -300,6 +309,8 @@ h3 {
     .calzone_container {
         .price_container {
             grid-column: span 3;
+            width: 100%;
+            padding: 0;
         }
     }
 
