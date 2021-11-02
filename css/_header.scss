@@ -15,15 +15,15 @@
 
 
 #header {
-    padding               : 4px;
-    display               : grid;
-    grid-auto-flow        : column;
-    background-color      : $bg_color;
-    align-items           : center;
-    position              : fixed;
-    top                   : 0;
-    width                 : 100%;
-    z-index               : 4;
+    padding         : 4px;
+    display         : grid;
+    grid-auto-flow  : column;
+    background-color: $bg_color;
+    align-items     : center;
+    position        : fixed;
+    top             : 0;
+    width           : 100%;
+    z-index         : 4;
 }
 
 #header_menu_container {
@@ -354,53 +354,61 @@ iframe {
     }
 
     #header_menu_container {
-        opacity       : 1;
+        opacity: 1;
 
         .nav {
-            position      : absolute;
-            grid-auto-flow: column;
-            top           : 0px;
-            left         : 55%;
-            width         : 40%;
-            max-width: 600px;
-            pointer-events: auto;
+            position           : absolute;
+            grid-auto-flow     : column;
+            top                : 0px;
+            left               : 55%;
+            width              : 40%;
+            max-width          : 600px;
+            pointer-events     : auto;
             grid-template-areas: "one two three";
 
-        >a:nth-child(1) {
-            grid-area: two;
-            color: $D_color;
-            font-weight: bold;
-        }
+            >a:nth-child(1) {
+                grid-area  : two;
+                color      : $D_color;
+                font-weight: bold;
+            }
+
+            >a:nth-child(2) {
+                grid-area: one;
+            }
+
+            >a:nth-child(3) {
+                grid-area: three;
+            }
         }
     }
 
     #menu_info {
-        position: absolute;
-        display : grid;
-        width   : 40%;
-        max-width: 600px;
-        padding: 8px;
+        position   : absolute;
+        display    : grid;
+        width      : 40%;
+        max-width  : 600px;
+        padding    : 8px;
         place-items: center;
         grid-template-areas:
             "a b c"
             "a b d";
-        top  : 0px;
-        right : 55%;
-        width: 40%;
+        top           : 0px;
+        right         : 55%;
+        width         : 40%;
         pointer-events: auto;
 
         >p:nth-child(1) {
-            grid-area: c;
-            align-self: end;
+            grid-area     : c;
+            align-self    : end;
             letter-spacing: normal;
-            font-weight: bold;
+            font-weight   : bold;
         }
 
         >p:nth-child(2) {
-            grid-area: d;
-            align-self: start;
+            grid-area     : d;
+            align-self    : start;
             letter-spacing: normal;
-            font-weight: bold;
+            font-weight   : bold;
         }
 
         >a:nth-child(4) {
@@ -418,12 +426,12 @@ iframe {
         >a:nth-child(5) {
             grid-area: b;
 
-            >p {                
-            font-weight: bolder;
-            padding: 5px 10px;
-            margin: 0px 25px;
-            border: 2px white solid;
-            color: $D_color;
+            >p {
+                font-weight: bolder;
+                padding    : 5px 10px;
+                margin     : 0px 25px;
+                border     : 2px white solid;
+                color      : $D_color;
             }
 
             >img {

@@ -787,6 +787,16 @@ iframe {
     color: #d10d0c;
     font-weight: bold;
   }
+  #header_menu_container .nav > a:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: one;
+  }
+  #header_menu_container .nav > a:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: three;
+  }
   #menu_info {
     position: absolute;
     display: -ms-grid;

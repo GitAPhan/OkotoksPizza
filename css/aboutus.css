@@ -787,6 +787,16 @@ iframe {
     color: #d10d0c;
     font-weight: bold;
   }
+  #header_menu_container .nav > a:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: one;
+  }
+  #header_menu_container .nav > a:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: three;
+  }
   #menu_info {
     position: absolute;
     display: -ms-grid;
@@ -885,7 +895,7 @@ main {
   display: grid;
   row-gap: 20px;
   place-items: center;
-  margin-top: 80px;
+  margin-top: 100px;
 }
 
 main > img:nth-child(1) {
@@ -933,6 +943,10 @@ article > img {
   width: 90%;
 }
 
+.float_image {
+  display: none;
+}
+
 article > div:not(.youtube) {
   display: -ms-grid;
   display: grid;
@@ -953,6 +967,16 @@ article > div:not(.youtube) {
   width: 100%;
 }
 
+.paragraph_break {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 63px;
+  width: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .history_container > .bg_image_container {
   background-image: url(https://popmenucloud.com/cdn-cgi/image/width=1440,height=1440,fit=scale-down,format=auto,quality=60/zeaxdpym/bc3ce265-e604-4d5f-9aeb-c4aab7a32855.JPG);
   background-size: cover;
@@ -969,13 +993,14 @@ article > div:not(.youtube) {
   background-image: url(https://images.unsplash.com/photo-1599875953199-2b39f58d106a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=773&q=80);
   background-size: cover;
   background-position: center;
+  margin-bottom: 30px;
 }
 
 .staff {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  padding-top: 20px;
+  padding-top: 50px;
   background-color: #444545;
 }
 
@@ -1057,14 +1082,16 @@ article > div:not(.youtube) {
   position: relative;
   overflow: hidden;
   width: 100%;
-  padding-top: 25px;
   padding-bottom: 66.25%;
+  max-height: 333px;
 }
 
 .photo_carousel > img {
   position: absolute;
   width: 80%;
   height: 80%;
+  max-height: 333px;
+  max-width: 500px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1120,12 +1147,29 @@ article > div:not(.youtube) {
   .staff .article p {
     padding: 5% 25%;
   }
+  .paragraph_break {
+    display: none;
+  }
   .staff .article > div:nth-child(1) > p {
     padding: 5% 25%;
   }
+  article:not(.kitchen_container > article) {
+    display: inline-block;
+  }
+  article > div {
+    display: inline;
+  }
+  .float_image {
+    display: block;
+    float: left;
+    width: 60%;
+    padding: 10px;
+  }
+  .float_image:not(.history_container img) {
+    float: right;
+  }
   article > img {
-    padding: 25px;
-    width: 70%;
+    display: none;
   }
   .staff .title {
     height: 300px;
@@ -1137,6 +1181,8 @@ article > div:not(.youtube) {
 
 @media only screen and (min-width: 1000px) {
   article {
+    display: -ms-grid;
+    display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     padding: 50px;
@@ -1144,6 +1190,20 @@ article > div:not(.youtube) {
   article img {
     width: 80%;
     padding: 0px;
+  }
+  article:not(.kitchen_container > article) {
+    display: -ms-grid;
+    display: grid;
+  }
+  main > div {
+    display: -ms-grid;
+    display: grid;
+  }
+  .float_image {
+    display: none;
+  }
+  article > img {
+    display: inline-block;
   }
   .family_hero {
     height: 300px;
@@ -1158,14 +1218,20 @@ article > div:not(.youtube) {
   }
   .staff .article p {
     padding: 65px;
-    width: 80%;
+    width: 75%;
+    -ms-grid-column-align: start;
+        justify-self: start;
   }
-  .staff .article .article > div:nth-child(1) > p {
+  .staff .article > div:nth-child(1) > p {
     padding: 65px;
-    width: 80%;
+    width: 75%;
+    -ms-grid-column-align: end;
+        justify-self: end;
   }
   .staff .article .photo_carousel {
     width: 100%;
+    padding-left: auto;
+    padding-right: auto;
   }
   .article .message_left {
     display: none;
@@ -1183,6 +1249,7 @@ article > div:not(.youtube) {
   }
   .message_left + .photo_carousel {
     width: 100%;
+    padding-top: 20px;
   }
   main > div {
     position: relative;
